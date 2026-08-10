@@ -6,3 +6,4 @@ extends Resource
 @export var texture: Texture2D
 @export var color: Color = Color.WHITE
 @export var tags: Array[StringName] = []
+@export var layer_texture: Texture2D
