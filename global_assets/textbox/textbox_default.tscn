@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://vtwjuafh0lrh"]
+
+[ext_resource type="Texture2D" uid="uid://2qerhj35po41" path="res://global_assets/textbox/textbox_default.png" id="1_nynk6"]
+
+[node name="TextboxDefault" type="Node2D" unique_id=1954700284]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=562319112]
+texture_filter = 1
+texture_repeat = 2
+offset_right = 287.0
+offset_bottom = 451.0
+texture = ExtResource("1_nynk6")
+patch_margin_left = 60
+patch_margin_top = 60
+patch_margin_right = 60
+patch_margin_bottom = 60
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
