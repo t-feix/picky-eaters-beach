@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpqymsdpo50e0"
-path="res://.godot/imported/tray_tomato.PNG-d23d631c6922371e6ba74f3f4be787f2.ctex"
+uid="uid://dgvtbfbv1v1m3"
+path="res://.godot/imported/side_cucumber.PNG-da630a67bf7256852248d404b1189b73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://global_assets/tray_ingredients/tray_tomato/tray_tomato.PNG"
-dest_files=["res://.godot/imported/tray_tomato.PNG-d23d631c6922371e6ba74f3f4be787f2.ctex"]
+source_file="res://global_assets/tray_ingredients/tray_cucumber/side_cucumber.PNG"
+dest_files=["res://.godot/imported/side_cucumber.PNG-da630a67bf7256852248d404b1189b73.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpqymsdpo50e0"
-path="res://.godot/imported/tray_tomato.PNG-d23d631c6922371e6ba74f3f4be787f2.ctex"
+uid="uid://cpvp86k0b0n0p"
+path="res://.godot/imported/tray_bacon_veg.PNG-2673820864a3f309405c02252fb2d715.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://global_assets/tray_ingredients/tray_tomato/tray_tomato.PNG"
-dest_files=["res://.godot/imported/tray_tomato.PNG-d23d631c6922371e6ba74f3f4be787f2.ctex"]
+source_file="res://global_assets/tray_ingredients/tray_bacon_veg/tray_bacon_veg.PNG"
+dest_files=["res://.godot/imported/tray_bacon_veg.PNG-2673820864a3f309405c02252fb2d715.ctex"]
 
 [params]
 
