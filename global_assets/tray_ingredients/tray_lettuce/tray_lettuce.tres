@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://doklr5amm1pxi"]
 
 [ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_jtjgt"]
-[ext_resource type="Texture2D" uid="uid://b150se7pun81f" path="res://global_assets/tray_ingredients/tray_lettuce/tray_lettuce.png" id="2_p4lt7"]
+[ext_resource type="Texture2D" uid="uid://sseb1a6ikiw6" path="res://global_assets/tray_ingredients/tray_lettuce/tray_lettuce.png" id="2_p4lt7"]
 
 [resource]
 script = ExtResource("1_jtjgt")
-id = &"2"
+id = &"lettuce"
 texture = ExtResource("2_p4lt7")
 metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

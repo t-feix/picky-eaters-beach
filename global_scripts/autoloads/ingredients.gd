@@ -2,6 +2,16 @@ extends Node
 
 const ROOT := "res://global_assets/tray_ingredients/"
 
+static func trim(tex: Texture2D) -> Texture2D:
+	var img := tex.get_image()
+	var used := img.get_used_rect()
+	if used.size == img.get_size():
+		return tex
+	var at := AtlasTexture.new()
+	at.atlas = tex
+	at.region = Rect2(used)
+	return at
+
 var all: Array[IngredientData] = []
 var by_id: Dictionary = {}
 
@@ -24,4 +34,10 @@ func _scan(dir_path: String) -> void:
 		var res := load(dir_path.path_join(clean))
 		if res is IngredientData:
 			all.append(res)
+			if res.layer_texture == null:
+				var side_path := dir_path.path_join("side_%s.png" % res.id)
+				if ResourceLoader.exists(side_path):
+					res.layer_texture = trim(load(side_path))
+				else:
+					push_warning("No side view at %s" % side_path)
 			by_id[res.id] = res
