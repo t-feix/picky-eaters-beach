@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://cwhchav2xkd7h"]
+
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_ewvuv"]
+[ext_resource type="Texture2D" uid="uid://iy6wv85xdira" path="res://global_assets/tray_ingredients/tray_cheese/tray_cheese.png" id="2_5gimf"]
+
+[resource]
+script = ExtResource("1_ewvuv")
+id = &"1"
+texture = ExtResource("2_5gimf")
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

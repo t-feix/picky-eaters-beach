@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cx4urj7wei4vk"]
+
+[ext_resource type="Texture2D" uid="uid://dr6f8y1m1mrjp" path="res://scenes/background/beach.png" id="1_iheb5"]
+
+[node name="Background" type="TextureRect" unique_id=485018402]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_iheb5")
+expand_mode = 1
+stretch_mode = 5

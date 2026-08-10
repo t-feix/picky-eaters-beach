@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bdiflnmj1o3y6"]
+
+[node name="DemandRow" type="HBoxContainer" unique_id=1881830378]
+mouse_filter = 2
+
+[node name="DemandLabel" type="Label" parent="." unique_id=971900479]
+layout_mode = 2
+text = "some demand about sandwich"

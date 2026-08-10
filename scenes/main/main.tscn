@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bdj6tdka8biuk"]
+
+[ext_resource type="PackedScene" uid="uid://cx4urj7wei4vk" path="res://scenes/background/background.tscn" id="1_iuonh"]
+[ext_resource type="PackedScene" uid="uid://b8qobrplsp0ha" path="res://scenes/customer/customer.tscn" id="2_k2fmo"]
+[ext_resource type="PackedScene" uid="uid://bwbthjk33dbti" path="res://scenes/tray_cabinet/tray_cabinet.tscn" id="3_k2fmo"]
+[ext_resource type="PackedScene" uid="uid://bg651jicydurv" path="res://scenes/build_area/build_area.tscn" id="4_l3cfh"]
+
+[node name="Main" type="Control" unique_id=1459291186]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" parent="." unique_id=485018402 instance=ExtResource("1_iuonh")]
+layout_mode = 1
+
+[node name="Customer" parent="." unique_id=823677855 instance=ExtResource("2_k2fmo")]
+layout_mode = 0
+
+[node name="TrayCabinet" parent="." unique_id=248565806 instance=ExtResource("3_k2fmo")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -492.0
+offset_right = 960.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="BuildArea" parent="." unique_id=735932729 instance=ExtResource("4_l3cfh")]
+layout_mode = 0
+offset_left = 1001.0
+offset_top = -16.0
+offset_right = 1701.0
+offset_bottom = 584.0

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bg651jicydurv"]
+
+[ext_resource type="Texture2D" uid="uid://ul47xiaxsg5w" path="res://scenes/build_area/countertop.png" id="1_dx7fc"]
+[ext_resource type="Script" uid="uid://cla6rhdj8uyc7" path="res://scenes/build_area/build_area.gd" id="1_mu4l8"]
+
+[node name="BuildArea" type="Control" unique_id=735932729]
+custom_minimum_size = Vector2(700, 600)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mu4l8")
+
+[node name="CounterTop" type="TextureRect" parent="." unique_id=806369204]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1, 0.35)
+pivot_offset_ratio = Vector2(0, 1)
+mouse_filter = 2
+texture = ExtResource("1_dx7fc")
+
+[node name="StackBox" type="VBoxContainer" parent="." unique_id=545303497]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -90.0
+offset_right = 20.0
+offset_bottom = -50.000854
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2

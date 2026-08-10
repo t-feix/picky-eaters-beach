@@ -1,0 +1,13 @@
+# Godot 4 import cache — never commit this
+.godot/
+
+# Exported builds
+/build/
+/export/
+
+# Godot-generated
+*.translation
+
+# OS junk
+.DS_Store
+Thumbs.db

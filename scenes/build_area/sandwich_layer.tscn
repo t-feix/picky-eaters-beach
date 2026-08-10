@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bpe8xo3pu5exb"]
+
+[ext_resource type="Script" uid="uid://ck3g1qiepmtno" path="res://scenes/build_area/sandwich_layer.gd" id="1_vun1h"]
+
+[node name="SandwichLayer" type="TextureRect" unique_id=954111577]
+mouse_filter = 0
+expand_mode = 1
+script = ExtResource("1_vun1h")
