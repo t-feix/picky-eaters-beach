@@ -7,8 +7,8 @@
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=562319112]
 texture_filter = 1
 texture_repeat = 2
-offset_right = 287.0
-offset_bottom = 451.0
+offset_right = 229.0
+offset_bottom = 488.0
 texture = ExtResource("1_nynk6")
 patch_margin_left = 60
 patch_margin_top = 60
