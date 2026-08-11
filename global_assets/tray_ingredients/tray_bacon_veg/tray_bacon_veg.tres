@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://800duedcgy2y"]
+
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_w0vpe"]
+[ext_resource type="Texture2D" uid="uid://cpvp86k0b0n0p" path="res://global_assets/tray_ingredients/tray_bacon_veg/tray_bacon_veg.PNG" id="2_ymi78"]
+
+[resource]
+script = ExtResource("1_w0vpe")
+id = &"bacon_veg"
+texture = ExtResource("2_ymi78")
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

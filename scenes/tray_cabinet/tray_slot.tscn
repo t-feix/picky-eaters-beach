@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://cdld020mgu0re"]
 
-[ext_resource type="Texture2D" uid="uid://bjuwfgo04cdt2" path="res://scenes/tray_cabinet/tray_slot.png" id="1_4j81m"]
+[ext_resource type="Texture2D" uid="uid://bkmyl0gufcqiu" path="res://scenes/tray_cabinet/tray_frame.PNG" id="1_ws43b"]
 [ext_resource type="Script" uid="uid://crl5hc6h341ld" path="res://scenes/tray_cabinet/tray_slot.gd" id="2_ws43b"]
 
-[node name="TraySlot" type="TextureRect" unique_id=2012220647]
+[node name="TraySlot" type="Control" unique_id=699927662]
 custom_minimum_size = Vector2(140, 140)
-mouse_filter = 0
-texture = ExtResource("1_4j81m")
+layout_mode = 3
+anchors_preset = 0
+offset_right = 140.0
+offset_bottom = 140.0
 script = ExtResource("2_ws43b")
 
 [node name="IngredientTexture" type="TextureRect" parent="." unique_id=1456450278]
@@ -20,3 +22,14 @@ grow_vertical = 2
 mouse_filter = 2
 expand_mode = 1
 stretch_mode = 5
+
+[node name="SlotFrame" type="TextureRect" parent="." unique_id=259168423]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_ws43b")
+expand_mode = 1

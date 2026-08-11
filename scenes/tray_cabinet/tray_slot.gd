@@ -1,5 +1,5 @@
 class_name TraySlot
-extends TextureRect
+extends Control
 
 const LAYER_WIDTH := 300
 
@@ -24,18 +24,22 @@ func _refresh() -> void:
 const PREVIEW_SIZE := Vector2(300, 40)
 
 func _get_drag_data(_pos: Vector2):
-	if ingredient == null:
-		return null
-	var tex: Texture2D = ingredient.layer_texture
-	if tex == null:
+	if ingredient == null or ingredient.layer_texture == null:
 		return null
 	var sz := ingredient.layer_size()
 
-	var preview := TextureRect.new()
-	preview.texture = tex
-	preview.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	preview.stretch_mode = TextureRect.STRETCH_SCALE
-	preview.custom_minimum_size = sz
-	preview.size = sz
-	set_drag_preview(preview)
+	var img := TextureRect.new()
+	img.texture = ingredient.layer_texture
+	img.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	img.stretch_mode = TextureRect.STRETCH_SCALE
+	img.custom_minimum_size = sz
+	img.size = sz
+	img.position = -sz * 0.5
+	img.modulate.a = 0.75
+	img.rotation = deg_to_rad(-3) 
+
+	var wrapper := Control.new()
+	wrapper.add_child(img)
+	set_drag_preview(wrapper)
+
 	return { &"ingredient_id": ingredient.id }

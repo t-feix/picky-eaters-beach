@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://mkfnmfxff6b8"]
+
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_2xw84"]
+[ext_resource type="Texture2D" uid="uid://d3rlxfky1w7uw" path="res://global_assets/tray_ingredients/tray_egg_sunny/tray_egg_sunny.PNG" id="2_j8gae"]
+
+[resource]
+script = ExtResource("1_2xw84")
+id = &"egg_sunny"
+texture = ExtResource("2_j8gae")
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

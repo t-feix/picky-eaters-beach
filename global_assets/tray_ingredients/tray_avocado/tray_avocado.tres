@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://dftdr1oyk8cyh"]
+
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_jputx"]
+[ext_resource type="Texture2D" uid="uid://ce4aqdh4don2d" path="res://global_assets/tray_ingredients/tray_avocado/tray_avocado.PNG" id="2_xugln"]
+
+[resource]
+script = ExtResource("1_jputx")
+id = &"avocado"
+texture = ExtResource("2_xugln")
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

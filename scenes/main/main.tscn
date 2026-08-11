@@ -21,20 +21,10 @@ layout_mode = 0
 
 [node name="TrayCabinet" parent="." unique_id=248565806 instance=ExtResource("3_k2fmo")]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -960.0
-offset_top = -492.0
-offset_right = 960.0
-grow_horizontal = 2
-grow_vertical = 0
 
 [node name="BuildArea" parent="." unique_id=735932729 instance=ExtResource("4_l3cfh")]
 layout_mode = 0
-offset_left = 1001.0
-offset_top = -16.0
-offset_right = 1701.0
-offset_bottom = 584.0
+offset_left = 1006.0
+offset_top = 180.0
+offset_right = 1706.0
+offset_bottom = 780.0

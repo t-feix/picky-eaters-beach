@@ -2,21 +2,17 @@
 
 [ext_resource type="Script" uid="uid://bamj4fnbsel35" path="res://scenes/tray_cabinet/tray_cabinet.gd" id="1_shsqm"]
 [ext_resource type="Texture2D" uid="uid://cc72eduswysxx" path="res://scenes/tray_cabinet/cabinet_background.png" id="1_wrxh1"]
-[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="2_xogup"]
-[ext_resource type="Resource" uid="uid://2qccd5a5vgwp" path="res://global_assets/tray_ingredients/tray_bread/tray_bread.tres" id="3_osxh0"]
-[ext_resource type="Resource" uid="uid://cwhchav2xkd7h" path="res://global_assets/tray_ingredients/tray_cheese/tray_cheese.tres" id="4_rccfk"]
-[ext_resource type="Resource" uid="uid://doklr5amm1pxi" path="res://global_assets/tray_ingredients/tray_lettuce/tray_lettuce.tres" id="5_do8gh"]
-[ext_resource type="Resource" uid="uid://csm26u551m05j" path="res://global_assets/tray_ingredients/tray_tomato/tray_tomato.tres" id="6_s3fag"]
-[ext_resource type="Resource" uid="uid://by3pl4qk4a3dn" path="res://global_assets/tray_ingredients/tray_white_sauce/tray_white_sauce.tres" id="7_0clp8"]
 
 [node name="TrayCabinet" type="Control" unique_id=248565806]
-custom_minimum_size = Vector2(1920, 492)
+custom_minimum_size = Vector2(0, 300)
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
 script = ExtResource("1_shsqm")
-slot_count = null
-columns = null
-ingredients = Array[ExtResource("2_xogup")]([ExtResource("3_osxh0"), ExtResource("4_rccfk"), ExtResource("5_do8gh"), ExtResource("6_s3fag"), ExtResource("7_0clp8")])
 
 [node name="CabinetBackground" type="NinePatchRect" parent="." unique_id=515229129]
 layout_mode = 1
@@ -28,10 +24,13 @@ grow_vertical = 2
 texture = ExtResource("1_wrxh1")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1295722058]
-custom_minimum_size = Vector2(1920, 360)
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 360.0
+custom_minimum_size = Vector2(1920, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
@@ -41,6 +40,8 @@ theme_override_constants/margin_bottom = 16
 [node name="TrayGrid" type="GridContainer" parent="MarginContainer" unique_id=729017535]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 16
 columns = 8

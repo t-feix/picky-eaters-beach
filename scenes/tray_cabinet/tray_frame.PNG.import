@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjuwfgo04cdt2"
-path="res://.godot/imported/tray_slot.png-747f017025afeb5a46d7fe9b3891123a.ctex"
+uid="uid://bkmyl0gufcqiu"
+path="res://.godot/imported/tray_frame.PNG-c0668dcac99cdc535698c8738e4ba3ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/tray_cabinet/tray_slot.png"
-dest_files=["res://.godot/imported/tray_slot.png-747f017025afeb5a46d7fe9b3891123a.ctex"]
+source_file="res://scenes/tray_cabinet/tray_frame.PNG"
+dest_files=["res://.godot/imported/tray_frame.PNG-c0668dcac99cdc535698c8738e4ba3ed.ctex"]
 
 [params]
 
