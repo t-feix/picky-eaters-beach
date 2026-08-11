@@ -4,9 +4,16 @@
 [ext_resource type="Script" uid="uid://cla6rhdj8uyc7" path="res://scenes/build_area/build_area.gd" id="1_mu4l8"]
 
 [node name="BuildArea" type="Control" unique_id=735932729]
-custom_minimum_size = Vector2(700, 600)
+custom_minimum_size = Vector2(700, 4000)
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -600.0
+grow_horizontal = 2
+grow_vertical = 0
 script = ExtResource("1_mu4l8")
 
 [node name="CounterTop" type="TextureRect" parent="." unique_id=806369204]

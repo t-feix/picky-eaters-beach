@@ -23,8 +23,8 @@ layout_mode = 0
 layout_mode = 1
 
 [node name="BuildArea" parent="." unique_id=735932729 instance=ExtResource("4_l3cfh")]
-layout_mode = 0
-offset_left = 1006.0
-offset_top = 180.0
-offset_right = 1706.0
-offset_bottom = 780.0
+layout_mode = 1
+offset_left = 404.0
+offset_top = -901.0
+offset_right = 404.0
+offset_bottom = -301.0
