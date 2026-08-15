@@ -7,4 +7,7 @@
 script = ExtResource("1_2xw84")
 id = &"egg_sunny"
 texture = ExtResource("2_j8gae")
+color_tag = &"white"
+unit_singular = "fried egg"
+unit_plural = "fried eggs"
 metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

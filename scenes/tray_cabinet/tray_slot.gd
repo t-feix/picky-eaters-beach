@@ -24,7 +24,7 @@ func _refresh() -> void:
 const PREVIEW_SIZE := Vector2(300, 40)
 
 func _get_drag_data(_pos: Vector2):
-	if ingredient == null or ingredient.layer_texture == null:
+	if ingredient == null or ingredient.layer_texture == null or (get_tree().current_scene.state != 3):
 		return null
 	var sz := ingredient.layer_size()
 

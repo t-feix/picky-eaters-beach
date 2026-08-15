@@ -7,4 +7,7 @@
 script = ExtResource("1_jtjgt")
 id = &"lettuce"
 texture = ExtResource("2_p4lt7")
+color_tag = &"green"
+unit_singular = "piece of lettuce"
+unit_plural = "pieces of lettuce"
 metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

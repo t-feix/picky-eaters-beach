@@ -10,6 +10,9 @@ const LAYER_WIDTH := 300
 @export var tags: Array[StringName] = []
 @export var layer_texture: Texture2D
 @export var overlap: int = 10
+@export var color_tag: StringName
+@export var unit_singular: String
+@export var unit_plural: String
 
 func layer_size() -> Vector2:
 	if layer_texture == null:

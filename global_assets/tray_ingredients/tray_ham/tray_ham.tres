@@ -7,4 +7,7 @@
 script = ExtResource("1_d2h6m")
 id = &"ham"
 texture = ExtResource("2_dqh70")
+color_tag = &"pink"
+unit_singular = "serving of ham"
+unit_plural = "servings of ham"
 metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

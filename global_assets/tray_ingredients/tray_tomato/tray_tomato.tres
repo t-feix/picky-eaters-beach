@@ -7,4 +7,7 @@
 script = ExtResource("1_j6mjr")
 id = &"tomato"
 texture = ExtResource("2_u0iwe")
+color_tag = &"red"
+unit_singular = "slice of tomato"
+unit_plural = "slices of tomato"
 metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

@@ -7,4 +7,7 @@
 script = ExtResource("1_gwgyn")
 id = &"cucumber"
 texture = ExtResource("2_u00go")
+color_tag = &"green"
+unit_singular = "handful of cucumbers"
+unit_plural = "handfuls of cucumbers"
 metadata/_custom_type_script = "uid://bbsjjwk61kyxy"
