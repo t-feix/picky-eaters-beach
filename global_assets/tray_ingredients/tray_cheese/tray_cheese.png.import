@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2ytiev4i200r"
-path="res://.godot/imported/tray_cheese.png-6c5b1366b721704edd8391c6a59d1dcc.ctex"
+path="res://.godot/imported/tray_cheese.PNG-e775bba921f6167cc13e21c4e78fc6bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://global_assets/tray_ingredients/tray_cheese/tray_cheese.png"
-dest_files=["res://.godot/imported/tray_cheese.png-6c5b1366b721704edd8391c6a59d1dcc.ctex"]
+source_file="res://global_assets/tray_ingredients/tray_cheese/tray_cheese.PNG"
+dest_files=["res://.godot/imported/tray_cheese.PNG-e775bba921f6167cc13e21c4e78fc6bf.ctex"]
 
 [params]
 

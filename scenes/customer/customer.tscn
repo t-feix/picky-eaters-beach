@@ -1,6 +1,18 @@
 [gd_scene format=3 uid="uid://b8qobrplsp0ha"]
 
 [ext_resource type="Texture2D" uid="uid://dmmifh5epx370" path="res://scenes/customer/customer_a.png" id="1_8noaa"]
+[ext_resource type="Texture2D" uid="uid://bcg7qu8piq24m" path="res://scenes/customer/reaction_wrong.png" id="2_qqtjw"]
+[ext_resource type="Texture2D" uid="uid://e8jewktnib2p" path="res://scenes/customer/reaction_right.png" id="3_fd46v"]
 
 [node name="Customer" type="TextureRect" unique_id=823677855]
 texture = ExtResource("1_8noaa")
+
+[node name="ReactionWrong" type="Sprite2D" parent="." unique_id=450303023]
+position = Vector2(326, 218)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_qqtjw")
+
+[node name="ReactionRight" type="Sprite2D" parent="." unique_id=2111857353]
+position = Vector2(740, 220)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_fd46v")
