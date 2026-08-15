@@ -8,11 +8,22 @@
 texture = ExtResource("1_8noaa")
 
 [node name="ReactionWrong" type="Sprite2D" parent="." unique_id=450303023]
+unique_name_in_owner = true
+visible = false
+position = Vector2(326, 218)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_qqtjw")
+
+[node name="ReactionWrong2" type="Sprite2D" parent="." unique_id=1630663650]
+unique_name_in_owner = true
+visible = false
 position = Vector2(326, 218)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_qqtjw")
 
 [node name="ReactionRight" type="Sprite2D" parent="." unique_id=2111857353]
+unique_name_in_owner = true
+visible = false
 position = Vector2(740, 220)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_fd46v")

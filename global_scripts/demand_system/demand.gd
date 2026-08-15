@@ -55,9 +55,11 @@ func check(layers: Array) -> bool:
 					n += 1
 			return n >= lo and n <= hi
 		Type.TOUCH:
+			var seen_subject := false
 			for i in layers.size():
 				if not subject.matches(layers[i]):
 					continue
+				seen_subject = true
 				var found := false
 				if i > 0 and object.matches(layers[i - 1]):
 					found = true
@@ -67,7 +69,8 @@ func check(layers: Array) -> bool:
 					return false
 				if not positive and found:
 					return false
-			return true
+			return seen_subject
+			
 	return true
 
 

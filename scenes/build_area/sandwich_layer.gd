@@ -49,6 +49,9 @@ func _gui_input(event: InputEvent) -> void:
 func _can_drop_data(_pos: Vector2, _data) -> bool:
 	return false
 
+func set_target(t: Vector2) -> void:
+	_target = t
+
 func _get_drag_data(_pos: Vector2):
 	var sz := custom_minimum_size
 	var img := TextureRect.new()

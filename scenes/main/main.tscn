@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bwbthjk33dbti" path="res://scenes/tray_cabinet/tray_cabinet.tscn" id="3_k2fmo"]
 [ext_resource type="Texture2D" uid="uid://yny6isdvicpp" path="res://scenes/build_area/Counter.png" id="4_a8run"]
 [ext_resource type="PackedScene" uid="uid://bg651jicydurv" path="res://scenes/build_area/build_area.tscn" id="4_l3cfh"]
-[ext_resource type="PackedScene" uid="uid://p2fo4eyyxh0" path="res://scenes/speech_bubble/speech_bubble.tscn" id="5_6q06x"]
+[ext_resource type="PackedScene" uid="uid://vtwjuafh0lrh" path="res://scenes/speech_bubble/speech_bubble.tscn" id="5_6q06x"]
 [ext_resource type="Texture2D" uid="uid://c54hgwol86yh4" path="res://scenes/build_area/interior.png" id="5_ouso4"]
 [ext_resource type="PackedScene" uid="uid://subi2db3ftpu" path="res://scenes/serve_button/serve_button.tscn" id="7_hujxm"]
 [ext_resource type="Texture2D" uid="uid://c7wm5knswc03u" path="res://scenes/build_area/Plate.png" id="10_blune"]
@@ -60,10 +60,10 @@ offset_bottom = -365.0
 [node name="SpeechBubble" parent="." unique_id=505320503 instance=ExtResource("5_6q06x")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 399.0
-offset_top = 4.0
-offset_right = 999.0
-offset_bottom = 704.0
+offset_left = 420.0
+offset_top = 29.0
+offset_right = 1020.0
+offset_bottom = 729.0
 
 [node name="DemandList" type="Label" parent="SpeechBubble" unique_id=1440014435]
 unique_name_in_owner = true
@@ -76,7 +76,7 @@ offset_bottom = 58.0
 [node name="ServeButton" parent="SpeechBubble" unique_id=830245787 instance=ExtResource("7_hujxm")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 386.0
-offset_top = 618.0
-offset_right = 586.0
-offset_bottom = 818.0
+offset_left = 369.46
+offset_top = 547.76
+offset_right = 569.45935
+offset_bottom = 747.76

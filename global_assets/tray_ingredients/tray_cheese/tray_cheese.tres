@@ -9,5 +9,5 @@ id = &"cheese"
 texture = ExtResource("2_5gimf")
 color_tag = &"yellow"
 unit_singular = "slice of cheese"
-unit_plural = "slice of cheese"
+unit_plural = "slices of cheese"
 metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

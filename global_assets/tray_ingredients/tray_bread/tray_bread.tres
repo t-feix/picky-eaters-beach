@@ -9,5 +9,5 @@ id = &"bread"
 texture = ExtResource("2_mwg2t")
 color_tag = &"brown"
 unit_singular = "slice of bread"
-unit_plural = "slice of bread"
+unit_plural = "slices of bread"
 metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

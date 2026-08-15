@@ -6,6 +6,8 @@ const LAYER_SCENE := preload("res://scenes/build_area/sandwich_layer.tscn")
 
 @onready var stack: Control = %StackBox
 
+const SQUASH = 0.55
+
 @export var separation: float = 10.0:
 	set(value):
 		separation = value
@@ -144,3 +146,17 @@ func remove_at(idx: int) -> void:
 	_reindex()
 	_position_layers(true)
 	sandwich_changed.emit(layers)
+
+func collapse(duration := 0.45) -> void:
+	if layers.is_empty():
+		return
+	var y := 0.0
+	var tw := create_tween().set_parallel(true)
+	tw.set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+	for i in stack.get_child_count():
+		var node: SandwichLayer = stack.get_child(i)
+		var target := Vector2(-node.size.x * 0.5, -y - node.size.y)
+		tw.tween_property(node, "position", target, duration).set_delay(i * 0.04)
+		node.set_target(target)
+		y += node.size.y * SQUASH
+	await tw.finished
