@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://subi2db3ftpu"]
 
+[ext_resource type="Texture2D" uid="uid://cdwik1ihw1edw" path="res://global_assets/Buttons/basic_button_green/Button_green.png" id="1_p8wrs"]
+[ext_resource type="Script" uid="uid://b4gh6jyud0h8u" path="res://scenes/serve_button/serve_button.gd" id="2_ysden"]
+[ext_resource type="FontFile" uid="uid://dw2onmeuucum7" path="res://global_assets/fonts/PermanentMarker.ttf" id="3_34m3i"]
+
 [node name="ServeButton" type="TextureButton" unique_id=830245787]
-custom_minimum_size = Vector2(100, 20)
+custom_minimum_size = Vector2(100, 100)
+offset_right = 200.0
+offset_bottom = 200.0
+texture_normal = ExtResource("1_p8wrs")
 ignore_texture_size = true
 stretch_mode = 5
+script = ExtResource("2_ysden")
 
 [node name="Label" type="Label" parent="." unique_id=1794191059]
 layout_mode = 1
@@ -12,4 +20,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_34m3i")
+theme_override_font_sizes/font_size = 32
 text = "Serve"
+horizontal_alignment = 1
+vertical_alignment = 1

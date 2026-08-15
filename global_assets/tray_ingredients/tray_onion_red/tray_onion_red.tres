@@ -7,4 +7,7 @@
 script = ExtResource("1_yneq0")
 id = &"onion_red"
 texture = ExtResource("2_y4tk4")
+color_tag = &"pink"
+unit_singular = "serving of onions"
+unit_plural = "servings of onions"
 metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

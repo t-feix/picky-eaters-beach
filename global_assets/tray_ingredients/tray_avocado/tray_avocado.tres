@@ -7,4 +7,7 @@
 script = ExtResource("1_jputx")
 id = &"avocado"
 texture = ExtResource("2_xugln")
+color_tag = &"green"
+unit_singular = "serving of avocado"
+unit_plural = "servings of avocado"
 metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

@@ -1,5 +1,6 @@
-[gd_scene format=3 uid="uid://p2fo4eyyxh0"]
+[gd_scene format=3 uid="uid://vtwjuafh0lrh"]
 
+[ext_resource type="Script" uid="uid://darbfinr2bs2i" path="res://scenes/speech_bubble/speech_bubble.gd" id="1_j2lwm"]
 [ext_resource type="Texture2D" uid="uid://2qerhj35po41" path="res://global_assets/textbox/textbox_default.png" id="1_u1dx8"]
 
 [node name="SpeechBubble" type="Control" unique_id=349640685]
@@ -8,6 +9,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 500.0
 offset_bottom = 500.0
+script = ExtResource("1_j2lwm")
 
 [node name="BubbleBG" type="NinePatchRect" parent="." unique_id=65882683]
 layout_mode = 1
@@ -32,7 +34,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_bottom = 24
 
 [node name="DemandList" type="VBoxContainer" parent="MarginContainer" unique_id=1840977750]
+unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 2
