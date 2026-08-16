@@ -66,13 +66,15 @@ static func _rank(d: Demand) -> int:
 		Demand.Type.TOUCH:       return 3
 	return 4
 
-static func generate(sandwich: Array, extra := 3) -> Dictionary:
+static func generate(sandwich: Array, difficulty := 0.0) -> Dictionary:
+	var extra := 2 + roundi(difficulty * 4.0)          # 2 at easy, 6 at hard
+
 	var demands: Array[Demand] = [
 		Demand.bread_ends(sandwich[0]),
 		Demand.layer_count(sandwich.size()),
 	]
 
-	var pool := _candidates(sandwich)
+	var pool := _candidates(sandwich, difficulty)
 	pool.shuffle()
 	for d in pool:
 		if demands.size() >= 2 + extra:
@@ -80,24 +82,33 @@ static func generate(sandwich: Array, extra := 3) -> Dictionary:
 		if _redundant(d, demands, sandwich):
 			continue
 		demands.append(d)
-	
+
 	_require_subjects(demands, sandwich)
 	demands.sort_custom(func(a, b): return _rank(a) < _rank(b))
 	return { demands = demands, singles = _singles(demands) }
 	
-static func _canonical_selectors(counts: Dictionary, colors: Dictionary, s: Array) -> Array[Selector]:
+static func _canonical_selectors(counts: Dictionary, colors: Dictionary, s: Array, difficulty: float) -> Array[Selector]:
 	var groups := {}
 	for sel in _selectors(counts, colors):
 		var sig := _sig(_extension(sel, s))
 		if not groups.has(sig):
 			groups[sig] = []
 		groups[sig].append(sel)
+
 	var out: Array[Selector] = []
 	for sig in groups:
-		out.append(groups[sig].pick_random())
+		var group: Array = groups[sig]
+		var ings: Array = group.filter(func(x): return x.kind == Selector.Kind.INGREDIENT)
+		var cols: Array = group.filter(func(x): return x.kind == Selector.Kind.COLOR)
+		if cols.is_empty():
+			out.append(ings.pick_random())
+		elif ings.is_empty() or randf() < difficulty:
+			out.append(cols.pick_random())
+		else:
+			out.append(ings.pick_random())
 	return out
 
-static func _candidates(s: Array) -> Array[Demand]:
+static func _candidates(s: Array, difficulty) -> Array[Demand]:
 	var out: Array[Demand] = []
 
 	var counts := {}
@@ -110,7 +121,7 @@ static func _candidates(s: Array) -> Array[Demand]:
 		if c != &"":
 			colors[c] = colors.get(c, 0) + 1
 
-	var sels := _canonical_selectors(counts, colors, s)
+	var sels := _canonical_selectors(counts, colors, s, difficulty)
 
 	var ext := {}
 	var occ := {}

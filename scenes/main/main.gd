@@ -19,6 +19,8 @@ var served: int = 0
 var current: Array[Demand] = []
 var singles := {}
 
+var difficulty: float = 0.0
+
 var rng := RandomNumberGenerator.new()
 
 const CUSTOMER_LOOKS := [
@@ -67,10 +69,11 @@ func _next_customer() -> void:
 	_present_order()
 
 func _present_order() -> void:
+	difficulty = minf(served / 10.0, 1.0)
 	_set_state(State.ORDERING)
-	var height := randi_range(3, 3)
+	var height := randi_range(4 + roundi(difficulty * 4.0), 6 + roundi(difficulty * 4.0))
 	var s := DemandGenerator.random_sandwich(height)
-	var g := DemandGenerator.generate(s, round((height + 3) / 2))
+	var g := DemandGenerator.generate(s, difficulty)
 
 	current = g.demands
 	singles = g.singles
