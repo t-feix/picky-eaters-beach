@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce7dvvmbcd1x5"
-path="res://.godot/imported/Loaf_bread.png-2d815ea56a9fe5c88c58b21faf07a19a.ctex"
+uid="uid://cq6kwnuvbkkk1"
+path="res://.godot/imported/tray_chickenbreast.png-e6944b7edee55de5b8052a52bfa2ea2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://global_assets/side_ingredients/bread/Loaf_bread.png"
-dest_files=["res://.godot/imported/Loaf_bread.png-2d815ea56a9fe5c88c58b21faf07a19a.ctex"]
+source_file="res://global_assets/tray_ingredients/tray_chicken breast/tray_chickenbreast.png"
+dest_files=["res://.godot/imported/tray_chickenbreast.png-e6944b7edee55de5b8052a52bfa2ea2f.ctex"]
 
 [params]
 

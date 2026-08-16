@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bo4bushivlje8" path="res://global_assets/bottle_ingredients/mayo/bottle_mayo.png" id="13_ou6is"]
 [ext_resource type="Texture2D" uid="uid://tja8g8wtytm7" path="res://global_assets/bottle_ingredients/mustard/bottle_mustard.png" id="14_necax"]
 [ext_resource type="Texture2D" uid="uid://b3ymb6r2s80jr" path="res://global_assets/bottle_ingredients/ranch/bottle_ranch.png" id="15_r4lks"]
-[ext_resource type="Texture2D" uid="uid://ce7dvvmbcd1x5" path="res://global_assets/side_ingredients/bread/Loaf_bread.png" id="16_pg34l"]
+[ext_resource type="Texture2D" uid="uid://ce7dvvmbcd1x5" path="res://global_assets/tray_ingredients/tray_bread/Loaf_bread.png" id="16_pg34l"]
 
 [node name="Main" type="Control" unique_id=1459291186]
 layout_mode = 3
