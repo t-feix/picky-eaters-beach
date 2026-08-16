@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bwbthjk33dbti" path="res://scenes/tray_cabinet/tray_cabinet.tscn" id="3_k2fmo"]
 [ext_resource type="Texture2D" uid="uid://yny6isdvicpp" path="res://scenes/build_area/Counter.png" id="4_a8run"]
 [ext_resource type="PackedScene" uid="uid://bg651jicydurv" path="res://scenes/build_area/build_area.tscn" id="4_l3cfh"]
-[ext_resource type="PackedScene" uid="uid://vtwjuafh0lrh" path="res://scenes/speech_bubble/speech_bubble.tscn" id="5_6q06x"]
+[ext_resource type="PackedScene" uid="uid://p2fo4eyyxh0" path="res://scenes/speech_bubble/speech_bubble.tscn" id="5_6q06x"]
 [ext_resource type="Texture2D" uid="uid://c54hgwol86yh4" path="res://scenes/build_area/interior.png" id="5_ouso4"]
 [ext_resource type="PackedScene" uid="uid://subi2db3ftpu" path="res://scenes/serve_button/serve_button.tscn" id="7_hujxm"]
 [ext_resource type="Texture2D" uid="uid://c7wm5knswc03u" path="res://scenes/build_area/Plate.png" id="10_blune"]
@@ -33,10 +33,12 @@ offset_bottom = 1991.0
 scale = Vector2(0.5, 0.5)
 
 [node name="Counter" type="Sprite2D" parent="." unique_id=1751020709]
+texture_filter = 1
 position = Vector2(960, 540)
 texture = ExtResource("4_a8run")
 
 [node name="Interior" type="Sprite2D" parent="." unique_id=2124770731]
+texture_filter = 1
 position = Vector2(960, 540)
 texture = ExtResource("5_ouso4")
 
@@ -45,6 +47,7 @@ unique_name_in_owner = true
 layout_mode = 1
 
 [node name="Plate" type="Sprite2D" parent="." unique_id=523809090]
+texture_filter = 1
 position = Vector2(1340, 683)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("10_blune")
