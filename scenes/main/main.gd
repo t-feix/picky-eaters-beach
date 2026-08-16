@@ -10,6 +10,12 @@ enum State { EMPTY, ARRIVING, ORDERING, BUILDING, LEAVING, JUDGING }
 @onready var react_right: Sprite2D = customer.get_node("ReactionRight")
 @onready var react_wrong: Sprite2D = customer.get_node("ReactionWrong")
 
+@onready var pause_button: TextureButton = %PauseButton
+@onready var tutorial: Control = %Tutorial
+
+func _go_to_tutorial():
+	get_tree().change_scene_to_file("res://scenes/tutorial/tutorial.tscn")
+
 @export var handover_dx: float = -975
 @export var handover_dy: float = -100.0
 
@@ -34,12 +40,29 @@ const CUSTOMER_LOOKS := [
 
 var current_voice: StringName = &"woman_1"
 
+var _started := false
+
 
 func _ready() -> void:
 	randomize()
+	%PauseButton.pressed.connect(_on_pause_pressed)
+	tutorial.closed.connect(_close_tutorial)
 	serve_button.pressed.connect(_on_serve)
+
+	tutorial.visible = true
+	get_tree().paused = true
 	_set_state(State.EMPTY)
-	_next_customer()
+
+func _close_tutorial() -> void:
+	get_tree().paused = false
+	tutorial.visible = false
+	if not _started:
+		_started = true
+		_next_customer()
+
+func _on_pause_pressed() -> void:
+	tutorial.visible = true
+	get_tree().paused = true
 
 func _can_drop_data(_pos: Vector2, data) -> bool:
 	return data is Dictionary and data.has(&"ingredient_id")
@@ -69,9 +92,9 @@ func _next_customer() -> void:
 	_present_order()
 
 func _present_order() -> void:
-	difficulty = minf(served / 10.0, 1.0)
+	difficulty = minf(served / 4.0, 1.0)
 	_set_state(State.ORDERING)
-	var height := randi_range(4 + roundi(difficulty * 4.0), 6 + roundi(difficulty * 4.0))
+	var height := randi_range(6 + roundi(difficulty * 2.0), 8 + roundi(difficulty * 2.0))
 	var s := DemandGenerator.random_sandwich(height)
 	var g := DemandGenerator.generate(s, difficulty)
 

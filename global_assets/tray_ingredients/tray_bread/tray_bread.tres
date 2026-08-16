@@ -8,6 +8,7 @@
 script = ExtResource("1_y0114")
 station = 2
 id = &"white_bread"
+display_name = "Light bread (brown)"
 texture = ExtResource("3_mwg2t")
 layer_texture = ExtResource("1_mwg2t")
 color_tag = &"brown"

@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("1_d2h6m")
 id = &"ham"
+display_name = "Ham (pink)"
 texture = ExtResource("2_dqh70")
 layer_texture = ExtResource("1_21cn4")
 color_tag = &"pink"

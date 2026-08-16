@@ -8,6 +8,7 @@
 script = ExtResource("1_j6mjr")
 sound_kind = 1
 id = &"tomato"
+display_name = "Tomato (red)"
 texture = ExtResource("2_u0iwe")
 layer_texture = ExtResource("1_u0iwe")
 color_tag = &"red"

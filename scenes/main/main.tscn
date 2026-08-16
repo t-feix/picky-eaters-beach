@@ -10,7 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://c54hgwol86yh4" path="res://scenes/build_area/interior.png" id="5_ouso4"]
 [ext_resource type="PackedScene" uid="uid://subi2db3ftpu" path="res://scenes/serve_button/serve_button.tscn" id="7_hujxm"]
 [ext_resource type="Texture2D" uid="uid://c7wm5knswc03u" path="res://scenes/build_area/Plate.png" id="10_blune"]
+[ext_resource type="Texture2D" uid="uid://demsg181618hv" path="res://global_assets/Buttons/basic_button_green/Button_green_hover.png" id="11_blune"]
 [ext_resource type="PackedScene" uid="uid://bke6lo4paasbt" path="res://scenes/sauce_shelf/shelf.tscn" id="11_ouso4"]
+[ext_resource type="PackedScene" uid="uid://5m4qbvnv1f8n" path="res://scenes/pause_button/pause_button.tscn" id="13_th5th"]
+[ext_resource type="PackedScene" uid="uid://kc0bnupyd7bc" path="res://scenes/tutorial/tutorial.tscn" id="14_7smn1"]
 
 [node name="Main" type="Control" unique_id=1459291186]
 layout_mode = 3
@@ -81,6 +84,7 @@ offset_left = 369.46
 offset_top = 547.76
 offset_right = 569.45935
 offset_bottom = 747.76
+texture_hover = ExtResource("11_blune")
 
 [node name="SauceShelf" parent="." unique_id=884540075 instance=ExtResource("11_ouso4")]
 unique_name_in_owner = true
@@ -100,3 +104,21 @@ offset_bottom = 1081.0
 vertical = true
 station = 2
 slot_size = Vector2(60, 135)
+
+[node name="PauseButton" parent="." unique_id=1773612503 instance=ExtResource("13_th5th")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1804.0
+offset_top = 16.0
+offset_right = 2004.0
+offset_bottom = 216.0
+scale = Vector2(0.5, 0.5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2073846026]
+process_mode = 2
+layer = 10
+
+[node name="Tutorial" parent="CanvasLayer" unique_id=1725079338 instance=ExtResource("14_7smn1")]
+unique_name_in_owner = true
+process_mode = 2
+visible = false

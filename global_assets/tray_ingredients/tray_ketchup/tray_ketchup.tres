@@ -9,6 +9,7 @@ script = ExtResource("1_vj6l1")
 station = 1
 sound_kind = 2
 id = &"ketchup"
+display_name = "Ketchup (red)"
 texture = ExtResource("3_7lcy4")
 layer_texture = ExtResource("1_j8f4h")
 color_tag = &"red"

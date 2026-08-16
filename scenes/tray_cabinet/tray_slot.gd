@@ -25,9 +25,10 @@ func _ready() -> void:
 func _refresh() -> void:
 	if ingredient:
 		icon.texture = ingredient.texture
-		icon.modulate = ingredient.color
+		tooltip_text = ingredient.display_name
 	else:
 		icon.texture = null
+		tooltip_text = ""
 		
 const PREVIEW_SIZE := Vector2(300, 40)
 

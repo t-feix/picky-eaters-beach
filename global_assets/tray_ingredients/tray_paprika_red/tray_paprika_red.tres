@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("1_4h6mf")
 id = &"paprika_red"
+display_name = "Red bell pepper (red)"
 texture = ExtResource("3_g0err")
 layer_texture = ExtResource("1_pu7m5")
 color_tag = &"red"

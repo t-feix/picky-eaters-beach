@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("1_lvkdp")
 id = &"shrimp"
+display_name = "Shrimp (pink)"
 texture = ExtResource("3_u3wti")
 layer_texture = ExtResource("1_jfbd7")
 color_tag = &"pink"

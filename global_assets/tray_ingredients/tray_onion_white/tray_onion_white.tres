@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("1_2vnlo")
 id = &"onion_white"
+display_name = "White onion (white)"
 texture = ExtResource("3_ggl33")
 layer_texture = ExtResource("1_nhfeo")
 color_tag = &"white"

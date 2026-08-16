@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("1_yneq0")
 id = &"onion_red"
+display_name = "Pink onion (pink)"
 texture = ExtResource("2_y4tk4")
 layer_texture = ExtResource("1_x4uua")
 color_tag = &"pink"

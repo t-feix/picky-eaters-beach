@@ -9,6 +9,7 @@ script = ExtResource("1_dcfwb")
 station = 1
 sound_kind = 3
 id = &"hotsauce"
+display_name = "Hot sauce (red)"
 texture = ExtResource("3_clu3b")
 layer_texture = ExtResource("1_i8flu")
 color_tag = &"red"

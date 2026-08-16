@@ -9,6 +9,7 @@ script = ExtResource("1_pafsi")
 station = 1
 sound_kind = 3
 id = &"ranch"
+display_name = "Ranch (white)"
 texture = ExtResource("3_2twpo")
 layer_texture = ExtResource("1_wdbmu")
 color_tag = &"white"

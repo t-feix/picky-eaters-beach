@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("2_evy80")
 id = &"chicken_breast"
+display_name = "Chicken breast (white)"
 texture = ExtResource("3_raxdk")
 layer_texture = ExtResource("1_myuhd")
 color_tag = &"white"

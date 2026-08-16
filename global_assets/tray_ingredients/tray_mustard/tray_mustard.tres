@@ -9,6 +9,7 @@ script = ExtResource("1_txxmu")
 station = 1
 sound_kind = 3
 id = &"mustard"
+display_name = "Mustard (yellow)"
 texture = ExtResource("3_5mhit")
 layer_texture = ExtResource("1_7slui")
 color_tag = &"yellow"

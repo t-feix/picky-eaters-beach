@@ -9,6 +9,7 @@ script = ExtResource("1_3oagk")
 station = 1
 sound_kind = 3
 id = &"pesto"
+display_name = "Pesto (green)"
 texture = ExtResource("3_n8mjb")
 layer_texture = ExtResource("1_i48pm")
 color_tag = &"green"

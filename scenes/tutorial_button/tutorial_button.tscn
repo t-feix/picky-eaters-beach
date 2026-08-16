@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://clfrij42abvyk"]
+
+[ext_resource type="Texture2D" uid="uid://cdwik1ihw1edw" path="res://global_assets/Buttons/basic_button_green/Button_green.png" id="1_klv1i"]
+[ext_resource type="Script" uid="uid://cwdd05s3f120f" path="res://scenes/tutorial_button/tutorial_button.gd" id="2_4t76v"]
+[ext_resource type="FontFile" uid="uid://dw2onmeuucum7" path="res://global_assets/fonts/PermanentMarker.ttf" id="3_di0qe"]
+
+[node name="TutorialButton" type="TextureButton" unique_id=830245787]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 200.0
+offset_bottom = 200.0
+texture_normal = ExtResource("1_klv1i")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_4t76v")
+
+[node name="Label" type="Label" parent="." unique_id=1794191059]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_di0qe")
+theme_override_font_sizes/font_size = 32
+text = "OK"
+horizontal_alignment = 1
+vertical_alignment = 1

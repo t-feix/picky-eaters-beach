@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://5m4qbvnv1f8n"]
+
+[ext_resource type="Texture2D" uid="uid://c8k4tno85tccd" path="res://global_assets/Buttons/pausebutton/pausebutton.png" id="1_xaj1y"]
+
+[node name="TutorialButton" type="TextureButton" unique_id=830245787]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 200.0
+offset_bottom = 200.0
+texture_normal = ExtResource("1_xaj1y")
+ignore_texture_size = true
+stretch_mode = 5

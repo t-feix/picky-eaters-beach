@@ -8,6 +8,7 @@
 script = ExtResource("1_edglu")
 sound_kind = 1
 id = &"meatballs"
+display_name = "Meatballs (brown)"
 texture = ExtResource("3_m3rto")
 layer_texture = ExtResource("1_628k6")
 color_tag = &"brown"

@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("1_8ow0r")
 id = &"rocula"
+display_name = "Argugula (green)"
 texture = ExtResource("3_wucim")
 layer_texture = ExtResource("1_c2s50")
 color_tag = &"green"

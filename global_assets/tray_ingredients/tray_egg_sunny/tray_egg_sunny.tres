@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("1_2xw84")
 id = &"egg_sunny"
+display_name = "Fried egg (white)"
 texture = ExtResource("2_j8gae")
 layer_texture = ExtResource("1_ulueb")
 color_tag = &"white"

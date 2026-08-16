@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://kc0bnupyd7bc"]
+
+[ext_resource type="Script" uid="uid://cfowpmiifrfux" path="res://scenes/tutorial/tutorial.gd" id="1_pq3l0"]
+[ext_resource type="PackedScene" uid="uid://cx4urj7wei4vk" path="res://scenes/background/background.tscn" id="1_ymgc8"]
+[ext_resource type="PackedScene" uid="uid://vtwjuafh0lrh" path="res://scenes/speech_bubble/speech_bubble.tscn" id="2_g40di"]
+[ext_resource type="FontFile" uid="uid://b35sj6272hn1j" path="res://global_assets/fonts/Caveat.ttf" id="3_pq3l0"]
+[ext_resource type="PackedScene" uid="uid://clfrij42abvyk" path="res://scenes/tutorial_button/tutorial_button.tscn" id="4_g40di"]
+[ext_resource type="Texture2D" uid="uid://demsg181618hv" path="res://global_assets/Buttons/basic_button_green/Button_green_hover.png" id="4_pq3l0"]
+
+[node name="Tutorial" type="Control" unique_id=1725079338]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pq3l0")
+
+[node name="Background" parent="." unique_id=485018402 instance=ExtResource("1_ymgc8")]
+layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Background" unique_id=620367484]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="TutorialContainer" parent="Background/MarginContainer" unique_id=349640685 instance=ExtResource("2_g40di")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(720, 720)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = null
+
+[node name="Label" type="Label" parent="Background/MarginContainer/TutorialContainer" unique_id=1303191078]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 39.0
+offset_right = 212.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pq3l0")
+theme_override_font_sizes/font_size = 64
+text = "Tutorial"
+
+[node name="Label2" type="Label" parent="Background/MarginContainer/TutorialContainer" unique_id=1704494520]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 114.0
+offset_right = 669.0
+offset_bottom = 639.0
+theme_override_colors/font_color = Color(0.19793725, 0.19793722, 0.19793722, 1)
+theme_override_fonts/font = ExtResource("3_pq3l0")
+theme_override_font_sizes/font_size = 32
+text = "Pay attention to your customer's wishes and assemble
+their sandwiches.
+
+To build a sandwich you can drag ingredients from your
+screen to the plate. You can also move them around once
+they're in the sandwich. 
+
+Use Right-Click to remove an ingredient from your sand-
+wich.
+
+You can return to this tutorial by pressing the pause
+button."
+
+[node name="TutorialButton" parent="." unique_id=830245787 instance=ExtResource("4_g40di")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1083.0
+offset_top = 745.0
+offset_right = 1283.0
+offset_bottom = 945.0
+texture_hover = ExtResource("4_pq3l0")

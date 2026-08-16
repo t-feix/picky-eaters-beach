@@ -8,6 +8,7 @@
 script = ExtResource("2_me1lj")
 station = 2
 id = &"bread_sourdough"
+display_name = "Sourdough bread (brown)"
 texture = ExtResource("3_n1t5w")
 layer_texture = ExtResource("1_k2fye")
 color_tag = &"brown"

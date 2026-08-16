@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("1_gwgyn")
 id = &"cucumber"
+display_name = "Cucumber (green)"
 texture = ExtResource("2_u00go")
 layer_texture = ExtResource("1_cpccx")
 color_tag = &"green"
