@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://2qccd5a5vgwp"]
 
+[ext_resource type="Texture2D" uid="uid://dfe54sy88vcmp" path="res://global_assets/tray_ingredients/tray_bread/side_bread.PNG" id="1_mwg2t"]
 [ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_y0114"]
 [ext_resource type="Texture2D" uid="uid://d1y8axfd6ubgo" path="res://global_assets/tray_ingredients/tray_bread/tray_bread.png" id="2_mwg2t"]
 
@@ -7,6 +8,7 @@
 script = ExtResource("1_y0114")
 id = &"bread"
 texture = ExtResource("2_mwg2t")
+layer_texture = ExtResource("1_mwg2t")
 color_tag = &"brown"
 unit_singular = "slice of bread"
 unit_plural = "slices of bread"

@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://doklr5amm1pxi"]
 
 [ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_jtjgt"]
+[ext_resource type="Texture2D" uid="uid://kdg1g4dugbuf" path="res://global_assets/tray_ingredients/tray_lettuce/side_lettuce.PNG" id="1_p4lt7"]
 [ext_resource type="Texture2D" uid="uid://sseb1a6ikiw6" path="res://global_assets/tray_ingredients/tray_lettuce/tray_lettuce.png" id="2_p4lt7"]
 
 [resource]
 script = ExtResource("1_jtjgt")
 id = &"lettuce"
 texture = ExtResource("2_p4lt7")
+layer_texture = ExtResource("1_p4lt7")
 color_tag = &"green"
 unit_singular = "piece of lettuce"
 unit_plural = "pieces of lettuce"

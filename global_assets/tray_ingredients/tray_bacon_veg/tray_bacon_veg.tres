@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://800duedcgy2y"]
 
+[ext_resource type="Texture2D" uid="uid://dsn7be4wlk3ut" path="res://global_assets/tray_ingredients/tray_bacon_veg/side_bacon_veg.PNG" id="1_q5mid"]
 [ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_w0vpe"]
 [ext_resource type="Texture2D" uid="uid://cpvp86k0b0n0p" path="res://global_assets/tray_ingredients/tray_bacon_veg/tray_bacon_veg.PNG" id="2_ymi78"]
 
@@ -7,6 +8,7 @@
 script = ExtResource("1_w0vpe")
 id = &"bacon_veg"
 texture = ExtResource("2_ymi78")
+layer_texture = ExtResource("1_q5mid")
 color_tag = &"brown"
 unit_singular = "serving of bacon"
 unit_plural = "servings of bacon"

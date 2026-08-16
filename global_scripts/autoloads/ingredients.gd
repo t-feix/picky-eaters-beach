@@ -18,7 +18,9 @@ var by_id: Dictionary = {}
 func _ready() -> void:
 	_scan(ROOT)
 	all.sort_custom(func(a, b): return a.id < b.id)
-	print("Ingredients loaded: ", all.size())
+	print("INGREDIENTS loaded: ", all.size())
+	for ing in all:
+		print("  ", ing.id, " tray=", ing.texture != null, " side=", ing.layer_texture != null)
 
 func _scan(dir_path: String) -> void:
 	var dir := DirAccess.open(dir_path)
@@ -34,10 +36,4 @@ func _scan(dir_path: String) -> void:
 		var res := load(dir_path.path_join(clean))
 		if res is IngredientData:
 			all.append(res)
-			if res.layer_texture == null:
-				var side_path := dir_path.path_join("side_%s.png" % res.id)
-				if ResourceLoader.exists(side_path):
-					res.layer_texture = trim(load(side_path))
-				else:
-					push_warning("No side view at %s" % side_path)
 			by_id[res.id] = res

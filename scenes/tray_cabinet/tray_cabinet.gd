@@ -37,3 +37,9 @@ func _resize_slots() -> void:
 		return
 	for slot in slots:
 		slot.custom_minimum_size = Vector2(s, s)
+
+func _can_drop_data(_pos: Vector2, data) -> bool:
+	return data is Dictionary and data.has(&"ingredient_id")
+
+func _drop_data(_pos: Vector2, _data) -> void:
+	pass

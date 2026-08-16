@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://csm26u551m05j"]
 
 [ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_j6mjr"]
+[ext_resource type="Texture2D" uid="uid://c5ql47xycny0n" path="res://global_assets/tray_ingredients/tray_tomato/side_tomato.PNG" id="1_u0iwe"]
 [ext_resource type="Texture2D" uid="uid://cpqymsdpo50e0" path="res://global_assets/tray_ingredients/tray_tomato/tray_tomato.png" id="2_u0iwe"]
 
 [resource]
 script = ExtResource("1_j6mjr")
 id = &"tomato"
 texture = ExtResource("2_u0iwe")
+layer_texture = ExtResource("1_u0iwe")
 color_tag = &"red"
 unit_singular = "slice of tomato"
 unit_plural = "slices of tomato"

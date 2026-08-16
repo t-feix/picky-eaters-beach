@@ -24,6 +24,7 @@ func _refresh() -> void:
 const PREVIEW_SIZE := Vector2(300, 40)
 
 func _get_drag_data(_pos: Vector2):
+	print("DRAG ing=", ingredient, " side=", ingredient.layer_texture if ingredient else "n/a")
 	if ingredient == null or ingredient.layer_texture == null or (get_tree().current_scene.state != 3):
 		return null
 	var sz := ingredient.layer_size()
@@ -43,3 +44,9 @@ func _get_drag_data(_pos: Vector2):
 	set_drag_preview(wrapper)
 
 	return { &"ingredient_id": ingredient.id }
+	
+func _can_drop_data(_pos: Vector2, data) -> bool:
+	return data is Dictionary and data.has(&"ingredient_id")
+
+func _drop_data(_pos: Vector2, _data) -> void:
+	pass

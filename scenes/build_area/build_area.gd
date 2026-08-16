@@ -6,7 +6,9 @@ const LAYER_SCENE := preload("res://scenes/build_area/sandwich_layer.tscn")
 
 @onready var stack: Control = %StackBox
 
-const SQUASH = 0.55
+const SQUASH = 0.15
+
+var _stack_home: Vector2
 
 @export var separation: float = 10.0:
 	set(value):
@@ -22,6 +24,7 @@ var _lifted_idx := -1
 var _lifted_id := &""
 
 func _ready() -> void:
+	_stack_home = stack.position
 	mouse_exited.connect(_clear_preview)
 	
 func _on_layer_drag_started(idx: int) -> void:
@@ -33,6 +36,7 @@ func _lift(idx: int) -> void:
 	remove_at(idx)
 
 func _can_drop_data(pos: Vector2, data) -> bool:
+	print("CAN_DROP ", data)
 	if not (data is Dictionary and data.has(&"ingredient_id")):
 		return false
 	var idx := _drop_index_at(pos)
@@ -160,3 +164,26 @@ func collapse(duration := 0.45) -> void:
 		node.set_target(target)
 		y += node.size.y * SQUASH
 	await tw.finished
+
+func move_to_customer(delta: Vector2, duration := 0.5) -> void:
+	if layers.is_empty():
+		return
+	var t := create_tween().set_parallel(true)
+	t.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+	t.tween_property(stack, "position", stack.position + delta, duration)
+	t.tween_property(stack, "scale", Vector2(0.45, 0.45), duration)
+	await t.finished
+
+func ride_out(delta_x: float, duration := 0.5) -> void:
+	if layers.is_empty():
+		return
+	var t := create_tween().set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN)
+	t.tween_property(stack, "position:x", stack.position.x + delta_x, duration)
+	await t.finished
+	_reset_stack()
+
+func _reset_stack() -> void:
+	clear()
+	stack.position = _stack_home
+	stack.scale = Vector2.ONE
+	stack.modulate.a = 1.0

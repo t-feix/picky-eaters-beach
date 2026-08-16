@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://bid27nwvh2p0a"]
 
+[ext_resource type="Texture2D" uid="uid://dgvtbfbv1v1m3" path="res://global_assets/tray_ingredients/tray_cucumber/side_cucumber.PNG" id="1_cpccx"]
 [ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_gwgyn"]
 [ext_resource type="Texture2D" uid="uid://12trg2jk4a6f" path="res://global_assets/tray_ingredients/tray_cucumber/tray_cucumber.PNG" id="2_u00go"]
 
@@ -7,6 +8,7 @@
 script = ExtResource("1_gwgyn")
 id = &"cucumber"
 texture = ExtResource("2_u00go")
+layer_texture = ExtResource("1_cpccx")
 color_tag = &"green"
 unit_singular = "handful of cucumbers"
 unit_plural = "handfuls of cucumbers"

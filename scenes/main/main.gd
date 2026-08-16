@@ -10,6 +10,9 @@ enum State { EMPTY, ARRIVING, ORDERING, BUILDING, LEAVING, JUDGING }
 @onready var react_right: Sprite2D = customer.get_node("ReactionRight")
 @onready var react_wrong: Sprite2D = customer.get_node("ReactionWrong")
 
+@export var handover_dx: float = -1100
+@export var handover_dy: float = -100.0
+
 var state: State = State.EMPTY
 var served: int = 0
 
@@ -18,14 +21,16 @@ var singles := {}
 
 var rng := RandomNumberGenerator.new()
 
-const CUSTOMER_VARIANTS := [
-	preload("res://scenes/customer/customer_a.png"),
-	preload("res://scenes/customer/customer_b.png"),
-	preload("res://scenes/customer/customer_c.png"),
-	preload("res://scenes/customer/customer_d.png"),
-	preload("res://scenes/customer/customer_e.png"),
-	preload("res://scenes/customer/customer_f.png"),
+const CUSTOMER_LOOKS := [
+	{ tex = preload("res://scenes/customer/customer_a.png"), voice = &"woman_1" },
+	{ tex = preload("res://scenes/customer/customer_b.png"), voice = &"man_1" },
+	{ tex = preload("res://scenes/customer/customer_c.png"), voice = &"man_2" },
+	{ tex = preload("res://scenes/customer/customer_d.png"), voice = &"woman_2" },
+	{ tex = preload("res://scenes/customer/customer_e.png"), voice = &"woman_1" },
+	{ tex = preload("res://scenes/customer/customer_f.png"), voice = &"man_2" },
 ]
+
+var current_voice: StringName = &"woman_1"
 
 
 func _ready() -> void:
@@ -34,29 +39,36 @@ func _ready() -> void:
 	_set_state(State.EMPTY)
 	_next_customer()
 
+func _can_drop_data(_pos: Vector2, data) -> bool:
+	return data is Dictionary and data.has(&"ingredient_id")
+
+func _drop_data(_pos: Vector2, _data) -> void:
+	pass
+
 func _set_state(s: State) -> void:
 	state = s
 	var can_build := s == State.BUILDING
 	build_area.mouse_filter = Control.MOUSE_FILTER_STOP if can_build else Control.MOUSE_FILTER_IGNORE
-	bubble.visible = s in [State.ORDERING, State.BUILDING, State.JUDGING]
-	serve_button.visible = bubble.visible
 	serve_button.disabled = not can_build
 
 func _next_customer() -> void:
 	_set_state(State.ARRIVING)
+	var look: Dictionary = CUSTOMER_LOOKS.pick_random()
+	customer.texture = look.tex
+	current_voice = look.voice
 	_hide_reactions()
 	customer.visible = true
 	customer.position.x = _offscreen_x()
-	customer.texture = CUSTOMER_VARIANTS.pick_random()
-	var t := create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-	t.tween_property(customer, "position:x", _home_x(), 0.6)
+	Audio.play(Audio.WALK_IN)
+	var t := create_tween().set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_OUT)
+	t.tween_property(customer, "position:x", _home_x(), 1.0)
 	await t.finished
 	await get_tree().create_timer(0.4).timeout
 	_present_order()
 
 func _present_order() -> void:
 	_set_state(State.ORDERING)
-	var height := randi_range(3, 4)
+	var height := randi_range(6, 10)
 	var s := DemandGenerator.random_sandwich(height)
 	var g := DemandGenerator.generate(s, round((height + 3) / 2))
 
@@ -67,6 +79,9 @@ func _present_order() -> void:
 	for d in current:
 		rows.append({ text = d.describe(singles), status = DemandRow.Status.PENDING })
 	bubble.show_demands(rows)
+	Audio.play(Audio.VOICES[current_voice], randf_range(0.95, 1.05))
+	await bubble.float_in()
+	_set_state(State.BUILDING)
 	await get_tree().create_timer(0.4).timeout
 	_set_state(State.BUILDING)
 
@@ -88,16 +103,25 @@ func _on_serve() -> void:
 		await _show_reaction(false)
 		_set_state(State.BUILDING)
 		return
-
+	
+	Audio.play(Audio.JINGLE)
 	await _show_reaction(true)
 	await build_area.collapse()
-	await get_tree().create_timer(0.4).timeout
+	await bubble.float_out()
+
+	await build_area.move_to_customer(Vector2(handover_dx, handover_dy))
+
+	await get_tree().create_timer(0.2).timeout
+
 	served += 1
 	_set_state(State.LEAVING)
-	build_area.clear()
-	var t := create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
-	t.tween_property(customer, "position:x", _offscreen_x(), 0.5)
-	await t.finished
+	var walk_dist := _offscreen_x() - customer.position.x
+	Audio.play(Audio.WALK_OUT)
+	var walk := create_tween().set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN)
+	walk.tween_property(customer, "position:x", _offscreen_x(), 1.0)
+	build_area.ride_out(walk_dist, 1.0)
+	await walk.finished
+
 	customer.visible = false
 	await get_tree().create_timer(0.5).timeout
 	_next_customer()

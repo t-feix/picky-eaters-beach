@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://u2rj7clgf7y7"]
 
+[ext_resource type="Texture2D" uid="uid://dftebg77r38fg" path="res://global_assets/tray_ingredients/tray_ham/side_ham.PNG" id="1_21cn4"]
 [ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_d2h6m"]
 [ext_resource type="Texture2D" uid="uid://osofg0ii53r0" path="res://global_assets/tray_ingredients/tray_ham/tray_ham.PNG" id="2_dqh70"]
 
@@ -7,6 +8,7 @@
 script = ExtResource("1_d2h6m")
 id = &"ham"
 texture = ExtResource("2_dqh70")
+layer_texture = ExtResource("1_21cn4")
 color_tag = &"pink"
 unit_singular = "serving of ham"
 unit_plural = "servings of ham"

@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://cspd2fehpfotg"]
 
+[ext_resource type="Texture2D" uid="uid://bih4kcfx6d736" path="res://global_assets/tray_ingredients/tray_onion_red/side_onion_red.PNG" id="1_x4uua"]
 [ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_yneq0"]
 [ext_resource type="Texture2D" uid="uid://bnids5b3356mn" path="res://global_assets/tray_ingredients/tray_onion_red/tray_onion_red.PNG" id="2_y4tk4"]
 
@@ -7,6 +8,7 @@
 script = ExtResource("1_yneq0")
 id = &"onion_red"
 texture = ExtResource("2_y4tk4")
+layer_texture = ExtResource("1_x4uua")
 color_tag = &"pink"
 unit_singular = "serving of onions"
 unit_plural = "servings of onions"
