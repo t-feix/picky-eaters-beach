@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://d0c5iv0aj0624"]
+
+[ext_resource type="Texture2D" uid="uid://wx176y7pg8pk" path="res://global_assets/tray_ingredients/tray_salmon/side_salmon.png" id="1_a43uu"]
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="2_c6wbf"]
+[ext_resource type="Texture2D" uid="uid://c682fq5v5e758" path="res://global_assets/tray_ingredients/tray_salmon/tray_salmon.png" id="3_56tnr"]
+
+[resource]
+script = ExtResource("2_c6wbf")
+id = &"salmon"
+texture = ExtResource("3_56tnr")
+layer_texture = ExtResource("1_a43uu")
+color_tag = &"red"
+unit_singular = "serving of salmon"
+unit_plural = "servings of salmon"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

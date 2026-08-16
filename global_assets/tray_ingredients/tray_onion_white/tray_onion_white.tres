@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://th3vef50ihl2"]
+
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_2vnlo"]
+[ext_resource type="Texture2D" uid="uid://xx0fec0u63hs" path="res://global_assets/tray_ingredients/tray_onion_white/side_onion_white.png" id="1_nhfeo"]
+[ext_resource type="Texture2D" uid="uid://butmfuapa1dqr" path="res://global_assets/tray_ingredients/tray_onion_white/tray_onion_white.png" id="3_ggl33"]
+
+[resource]
+script = ExtResource("1_2vnlo")
+id = &"onion_white"
+texture = ExtResource("3_ggl33")
+layer_texture = ExtResource("1_nhfeo")
+color_tag = &"white"
+unit_singular = "serving of white onions"
+unit_plural = "servings of white onions"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

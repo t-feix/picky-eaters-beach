@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://r2aqesv5c1rb"]
+
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_ool5j"]
+[ext_resource type="Texture2D" uid="uid://b6y6p234jnom5" path="res://global_assets/tray_ingredients/tray_mushroom/side_mushroom.png" id="1_wswg0"]
+[ext_resource type="Texture2D" uid="uid://vc5ee0mususy" path="res://global_assets/tray_ingredients/tray_mushroom/tray_mushroom.png" id="3_castv"]
+
+[resource]
+script = ExtResource("1_ool5j")
+id = &"mushroom"
+texture = ExtResource("3_castv")
+layer_texture = ExtResource("1_wswg0")
+color_tag = &"white"
+unit_singular = "handful of mushrooms"
+unit_plural = "handfuls of mushrooms"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://dc6htfqu7yisj"]
+
+[ext_resource type="Texture2D" uid="uid://dmkop282k727p" path="res://global_assets/tray_ingredients/tray_bacon/side_bacon.png" id="1_3vjen"]
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_knln1"]
+[ext_resource type="Texture2D" uid="uid://4n73qkyvojyt" path="res://global_assets/tray_ingredients/tray_bacon/tray_bacon.png" id="3_y4vdh"]
+
+[resource]
+script = ExtResource("1_knln1")
+id = &"bacon"
+texture = ExtResource("3_y4vdh")
+layer_texture = ExtResource("1_3vjen")
+color_tag = &"pink"
+unit_singular = "serving of bacon"
+unit_plural = "servings of bacon"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

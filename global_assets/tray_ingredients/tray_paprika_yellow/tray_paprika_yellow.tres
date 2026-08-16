@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://con4ijmcysdoe"]
+
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_i3l2d"]
+[ext_resource type="Texture2D" uid="uid://b7u1drs5ok1nm" path="res://global_assets/tray_ingredients/tray_paprika_yellow/side_paprika_yellow.png" id="1_tsvdq"]
+[ext_resource type="Texture2D" uid="uid://bxuo4xigpm6uk" path="res://global_assets/tray_ingredients/tray_paprika_yellow/tray_paprika_yellow.png" id="3_v8ecn"]
+
+[resource]
+script = ExtResource("1_i3l2d")
+id = &"paprika_yellow"
+texture = ExtResource("3_v8ecn")
+layer_texture = ExtResource("1_tsvdq")
+color_tag = &"yellow"
+unit_singular = "serving of yellow bell peppers"
+unit_plural = "servings of yellow bell peppers"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://doplurmh81vr3"]
+
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_1i85s"]
+[ext_resource type="Texture2D" uid="uid://b2sqoki2yofap" path="res://global_assets/tray_ingredients/tray_tofu/side_tofu.png" id="1_kp3sm"]
+[ext_resource type="Texture2D" uid="uid://dym8jaei28chc" path="res://global_assets/tray_ingredients/tray_tofu/tray_tofu.png" id="3_3kcii"]
+
+[resource]
+script = ExtResource("1_1i85s")
+id = &"tofu"
+texture = ExtResource("3_3kcii")
+layer_texture = ExtResource("1_kp3sm")
+color_tag = &"brown"
+unit_singular = "serving of tofu"
+unit_plural = "servings of tofu"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

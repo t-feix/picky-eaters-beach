@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c54hgwol86yh4" path="res://scenes/build_area/interior.png" id="5_ouso4"]
 [ext_resource type="PackedScene" uid="uid://subi2db3ftpu" path="res://scenes/serve_button/serve_button.tscn" id="7_hujxm"]
 [ext_resource type="Texture2D" uid="uid://c7wm5knswc03u" path="res://scenes/build_area/Plate.png" id="10_blune"]
+[ext_resource type="PackedScene" uid="uid://bke6lo4paasbt" path="res://scenes/sauce_shelf/sauce_shelf.tscn" id="11_ouso4"]
 
 [node name="Main" type="Control" unique_id=1459291186]
 layout_mode = 3
@@ -45,24 +46,24 @@ unique_name_in_owner = true
 layout_mode = 1
 
 [node name="Plate" type="Sprite2D" parent="." unique_id=523809090]
-position = Vector2(1340, 683)
+position = Vector2(1222, 687)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("10_blune")
 
 [node name="BuildArea" parent="." unique_id=735932729 instance=ExtResource("4_l3cfh")]
 unique_name_in_owner = true
 layout_mode = 1
-offset_left = 32.0
-offset_top = -4365.0
-offset_right = 732.0
-offset_bottom = -365.0
+offset_left = -86.0
+offset_top = -4361.0
+offset_right = 614.0
+offset_bottom = -361.0
 
 [node name="SpeechBubble" parent="." unique_id=505320503 instance=ExtResource("5_6q06x")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 420.0
+offset_left = 384.0
 offset_top = 29.0
-offset_right = 1020.0
+offset_right = 984.0
 offset_bottom = 729.0
 
 [node name="DemandList" type="Label" parent="SpeechBubble" unique_id=1440014435]
@@ -80,3 +81,11 @@ offset_left = 369.46
 offset_top = 547.76
 offset_right = 569.45935
 offset_bottom = 747.76
+
+[node name="SauceShelf" parent="." unique_id=884540075 instance=ExtResource("11_ouso4")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1417.0
+offset_top = 566.0
+offset_right = 1917.0
+offset_bottom = 726.0

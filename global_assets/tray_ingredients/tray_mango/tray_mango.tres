@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://dx05mykpcmmj4"]
+
+[ext_resource type="Texture2D" uid="uid://paw4higmcyq2" path="res://global_assets/tray_ingredients/tray_mango/side_mango.png" id="1_021fc"]
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_g8tbm"]
+[ext_resource type="Texture2D" uid="uid://42xgnqqfxh04" path="res://global_assets/tray_ingredients/tray_mango/tray_mango.png" id="3_158ha"]
+
+[resource]
+script = ExtResource("1_g8tbm")
+id = &"mango"
+texture = ExtResource("3_158ha")
+layer_texture = ExtResource("1_021fc")
+color_tag = &"yellow"
+unit_singular = "serving of mango"
+unit_plural = "servings of mango"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

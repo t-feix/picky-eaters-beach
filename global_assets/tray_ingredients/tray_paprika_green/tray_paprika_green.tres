@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://drd2uouqqom7f"]
+
+[ext_resource type="Texture2D" uid="uid://bqwv3jitd6st3" path="res://global_assets/tray_ingredients/tray_paprika_green/side_paprika_green.png" id="1_c1gw5"]
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_du7p6"]
+[ext_resource type="Texture2D" uid="uid://c4efeqhsv86n" path="res://global_assets/tray_ingredients/tray_paprika_green/tray_paprika_green.png" id="3_kmtwo"]
+
+[resource]
+script = ExtResource("1_du7p6")
+id = &"paprika_green"
+texture = ExtResource("3_kmtwo")
+layer_texture = ExtResource("1_c1gw5")
+color_tag = &"green"
+unit_singular = "serving of green bell peppers"
+unit_plural = "servings of green bell peppers"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

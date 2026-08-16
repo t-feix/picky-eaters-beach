@@ -4,6 +4,13 @@ extends Control
 const LAYER_WIDTH := 300
 
 @onready var icon: TextureRect = %IngredientTexture
+@onready var frame: TextureRect = %SlotFrame
+
+var show_frame := true:
+	set(value):
+		show_frame = value
+		if is_node_ready():
+			frame.visible = value
 
 var ingredient: IngredientData = null:
 	set(value):
@@ -12,6 +19,7 @@ var ingredient: IngredientData = null:
 			_refresh()
 
 func _ready() -> void:
+	frame.visible = show_frame
 	_refresh()
 
 func _refresh() -> void:

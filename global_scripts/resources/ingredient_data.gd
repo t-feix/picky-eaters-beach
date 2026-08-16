@@ -3,6 +3,8 @@ extends Resource
 
 const LAYER_WIDTH := 300
 
+@export var is_sauce: bool = false
+
 @export var id: StringName
 @export var display_name: String
 @export var texture: Texture2D

@@ -21,7 +21,7 @@ func _ready() -> void:
 		var slot: TraySlot = TRAY_SLOT.instantiate()
 		grid.add_child(slot)
 		slots.append(slot)
-	set_palette(Ingredients.all)
+	set_palette(Ingredients.tray)
 	resized.connect(_resize_slots)
 	_resize_slots()
 

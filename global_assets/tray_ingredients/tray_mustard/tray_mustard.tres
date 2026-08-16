@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://chv5lrfit7ims"]
+
+[ext_resource type="Texture2D" uid="uid://dphshihak77df" path="res://global_assets/tray_ingredients/tray_mustard/side_sauce_mustart.PNG" id="1_7slui"]
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_txxmu"]
+[ext_resource type="Texture2D" uid="uid://tja8g8wtytm7" path="res://global_assets/tray_ingredients/tray_mustard/bottle_mustard.png" id="3_5mhit"]
+
+[resource]
+script = ExtResource("1_txxmu")
+is_sauce = true
+id = &"mustard"
+texture = ExtResource("3_5mhit")
+layer_texture = ExtResource("1_7slui")
+color_tag = &"yellow"
+unit_singular = "squirt of mustard"
+unit_plural = "squirts of mustard"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

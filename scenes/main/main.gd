@@ -10,7 +10,7 @@ enum State { EMPTY, ARRIVING, ORDERING, BUILDING, LEAVING, JUDGING }
 @onready var react_right: Sprite2D = customer.get_node("ReactionRight")
 @onready var react_wrong: Sprite2D = customer.get_node("ReactionWrong")
 
-@export var handover_dx: float = -1100
+@export var handover_dx: float = -975
 @export var handover_dy: float = -100.0
 
 var state: State = State.EMPTY
@@ -68,7 +68,7 @@ func _next_customer() -> void:
 
 func _present_order() -> void:
 	_set_state(State.ORDERING)
-	var height := randi_range(6, 10)
+	var height := randi_range(3, 3)
 	var s := DemandGenerator.random_sandwich(height)
 	var g := DemandGenerator.generate(s, round((height + 3) / 2))
 

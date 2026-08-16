@@ -2,6 +2,38 @@ extends Node
 
 const ROOT := "res://global_assets/tray_ingredients/"
 
+const FILES := [
+	preload("res://global_assets/tray_ingredients/tray_bacon_veg/tray_bacon_veg.tres"),
+	preload("res://global_assets/tray_ingredients/tray_meatballs/tray_meatballs.tres"),
+	preload("res://global_assets/tray_ingredients/tray_tofu/tray_tofu.tres"),
+	preload("res://global_assets/tray_ingredients/tray_avocado/tray_avocado.tres"),
+	preload("res://global_assets/tray_ingredients/tray_cucumber/tray_cucumber.tres"),
+	preload("res://global_assets/tray_ingredients/tray_lettuce/tray_lettuce.tres"),
+	preload("res://global_assets/tray_ingredients/tray_paprika_green/tray_paprika_green.tres"),
+	preload("res://global_assets/tray_ingredients/tray_rocula/tray_rocula.tres"),
+	preload("res://global_assets/tray_ingredients/tray_cheese/tray_cheese.tres"),
+	preload("res://global_assets/tray_ingredients/tray_mango/tray_mango.tres"),
+	preload("res://global_assets/tray_ingredients/tray_paprika_yellow/tray_paprika_yellow.tres"),
+	preload("res://global_assets/tray_ingredients/tray_paprika_red/tray_paprika_red.tres"),
+	preload("res://global_assets/tray_ingredients/tray_salmon/tray_salmon.tres"),
+	preload("res://global_assets/tray_ingredients/tray_tomato/tray_tomato.tres"),
+	preload("res://global_assets/tray_ingredients/tray_bacon/tray_bacon.tres"),
+	preload("res://global_assets/tray_ingredients/tray_ham/tray_ham.tres"),
+	preload("res://global_assets/tray_ingredients/tray_onion_red/tray_onion_red.tres"),
+	preload("res://global_assets/tray_ingredients/tray_onion_white/tray_onion_white.tres"),
+	preload("res://global_assets/tray_ingredients/tray_chicken_breast/tray_chicken_breast.tres"),
+	preload("res://global_assets/tray_ingredients/tray_egg_sunny/tray_egg_sunny.tres"),
+	preload("res://global_assets/tray_ingredients/tray_mushroom/tray_mushroom.tres"),
+	preload("res://global_assets/tray_ingredients/tray_bread/tray_bread.tres"),
+	preload("res://global_assets/tray_ingredients/tray_bread_sourdough/tray_bread_sourdough.tres"),
+	preload("res://global_assets/tray_ingredients/tray_hotsauce/tray_hotsauce.tres"),
+	preload("res://global_assets/tray_ingredients/tray_ketchup/tray_ketchup.tres"),
+	preload("res://global_assets/tray_ingredients/tray_mayo/tray_mayo.tres"),
+	preload("res://global_assets/tray_ingredients/tray_ranch/tray_ranch.tres"),
+	preload("res://global_assets/tray_ingredients/tray_mustard/tray_mustard.tres"),
+	preload("res://global_assets/tray_ingredients/tray_pesto/tray_pesto.tres"),
+]
+
 static func trim(tex: Texture2D) -> Texture2D:
 	var img := tex.get_image()
 	var used := img.get_used_rect()
@@ -13,14 +45,20 @@ static func trim(tex: Texture2D) -> Texture2D:
 	return at
 
 var all: Array[IngredientData] = []
+var tray: Array[IngredientData] = []
+var sauces: Array[IngredientData] = []
+
+
 var by_id: Dictionary = {}
 
 func _ready() -> void:
-	_scan(ROOT)
-	all.sort_custom(func(a, b): return a.id < b.id)
-	print("INGREDIENTS loaded: ", all.size())
-	for ing in all:
-		print("  ", ing.id, " tray=", ing.texture != null, " side=", ing.layer_texture != null)
+	for ing in FILES:
+		all.append(ing)
+		by_id[ing.id] = ing
+		if ing.is_sauce:
+			sauces.append(ing)
+		else:
+			tray.append(ing)
 
 func _scan(dir_path: String) -> void:
 	var dir := DirAccess.open(dir_path)

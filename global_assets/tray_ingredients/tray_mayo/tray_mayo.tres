@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://cogb1p5ci1uvs"]
+
+[ext_resource type="Texture2D" uid="uid://b1s5umi8gpqlh" path="res://global_assets/tray_ingredients/tray_mayo/side_sauce_mayo.png" id="1_tmi4e"]
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_u8ndn"]
+[ext_resource type="Texture2D" uid="uid://bo4bushivlje8" path="res://global_assets/tray_ingredients/tray_mayo/bottle_mayo.png" id="3_k7vgs"]
+
+[resource]
+script = ExtResource("1_u8ndn")
+is_sauce = true
+id = &"mayo"
+texture = ExtResource("3_k7vgs")
+layer_texture = ExtResource("1_tmi4e")
+color_tag = &"white"
+unit_singular = "squirt of mayo"
+unit_plural = "squirts of mayo"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

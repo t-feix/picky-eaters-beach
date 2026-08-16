@@ -2,12 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://dfe54sy88vcmp" path="res://global_assets/tray_ingredients/tray_bread/side_bread.PNG" id="1_mwg2t"]
 [ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_y0114"]
-[ext_resource type="Texture2D" uid="uid://d1y8axfd6ubgo" path="res://global_assets/tray_ingredients/tray_bread/tray_bread.png" id="2_mwg2t"]
+[ext_resource type="Texture2D" uid="uid://ce7dvvmbcd1x5" path="res://global_assets/tray_ingredients/tray_bread/Loaf_bread.png" id="3_mwg2t"]
 
 [resource]
 script = ExtResource("1_y0114")
 id = &"bread"
-texture = ExtResource("2_mwg2t")
+texture = ExtResource("3_mwg2t")
 layer_texture = ExtResource("1_mwg2t")
 color_tag = &"brown"
 unit_singular = "slice of bread"

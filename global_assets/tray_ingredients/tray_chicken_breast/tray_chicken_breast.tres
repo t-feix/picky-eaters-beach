@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://b6d87p6lnkmdk"]
+
+[ext_resource type="Texture2D" uid="uid://dsdy8wflh1km4" path="res://global_assets/tray_ingredients/tray_chicken_breast/side_chickenbreast.png" id="1_myuhd"]
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="2_evy80"]
+[ext_resource type="Texture2D" uid="uid://cq6kwnuvbkkk1" path="res://global_assets/tray_ingredients/tray_chicken_breast/tray_chickenbreast.png" id="3_raxdk"]
+
+[resource]
+script = ExtResource("2_evy80")
+id = &"chicken_breast"
+texture = ExtResource("3_raxdk")
+layer_texture = ExtResource("1_myuhd")
+color_tag = &"white"
+unit_singular = "serving of chicken breast"
+unit_plural = "servings of chicken breast"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

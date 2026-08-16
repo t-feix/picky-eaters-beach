@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://cyfv3bfyv5815"]
+
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_8ow0r"]
+[ext_resource type="Texture2D" uid="uid://8ttmo28wicgv" path="res://global_assets/tray_ingredients/tray_rocula/side_rocula.png" id="1_c2s50"]
+[ext_resource type="Texture2D" uid="uid://dcihpev2fwstl" path="res://global_assets/tray_ingredients/tray_rocula/tray_rocula.png" id="3_wucim"]
+
+[resource]
+script = ExtResource("1_8ow0r")
+id = &"rocula"
+texture = ExtResource("3_wucim")
+layer_texture = ExtResource("1_c2s50")
+color_tag = &"green"
+unit_singular = "handful of arugula"
+unit_plural = "handfuls of arugula"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

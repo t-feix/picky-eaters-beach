@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://buj36nvvuyhuh"]
+
+[ext_resource type="Texture2D" uid="uid://dj14i86v265st" path="res://global_assets/tray_ingredients/tray_ketchup/side_sauce_ketchup.png" id="1_j8f4h"]
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_vj6l1"]
+[ext_resource type="Texture2D" uid="uid://c8s0qqst2efvg" path="res://global_assets/tray_ingredients/tray_ketchup/bottle_ketchup.png" id="3_7lcy4"]
+
+[resource]
+script = ExtResource("1_vj6l1")
+is_sauce = true
+id = &"ketchup"
+texture = ExtResource("3_7lcy4")
+layer_texture = ExtResource("1_j8f4h")
+color_tag = &"red"
+unit_singular = "squirt of ketchup"
+unit_plural = "squirts of ketchup"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

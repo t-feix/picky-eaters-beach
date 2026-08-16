@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://b1bdkvvc7c27s"]
+
+[ext_resource type="Texture2D" uid="uid://d21h7inejvqra" path="res://global_assets/tray_ingredients/tray_bread_sourdough/side_bread_sourdough.png" id="1_k2fye"]
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="2_me1lj"]
+[ext_resource type="Texture2D" uid="uid://jxpc30jxe3de" path="res://global_assets/tray_ingredients/tray_bread_sourdough/Loaf_sourdough.png" id="3_n1t5w"]
+
+[resource]
+script = ExtResource("2_me1lj")
+id = &"bread_sourdough"
+texture = ExtResource("3_n1t5w")
+layer_texture = ExtResource("1_k2fye")
+color_tag = &"brown"
+unit_singular = "slice of sourdough bread"
+unit_plural = "slices of sourdough bread"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

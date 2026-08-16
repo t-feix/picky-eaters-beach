@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://ct14aupiylqrc"]
+
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_3oagk"]
+[ext_resource type="Texture2D" uid="uid://ean7j7ksdw3n" path="res://global_assets/tray_ingredients/tray_pesto/side_pesto.png" id="1_i48pm"]
+[ext_resource type="Texture2D" uid="uid://b4glea7yowc5n" path="res://global_assets/tray_ingredients/tray_pesto/bottle_pesto.png" id="3_n8mjb"]
+
+[resource]
+script = ExtResource("1_3oagk")
+is_sauce = true
+id = &"pesto"
+texture = ExtResource("3_n8mjb")
+layer_texture = ExtResource("1_i48pm")
+color_tag = &"green"
+unit_singular = "spoonful of pesto"
+unit_plural = "spoonfuls of pesto"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"
