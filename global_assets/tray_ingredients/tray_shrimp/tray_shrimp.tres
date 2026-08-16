@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientData" format=3 uid="uid://b6b50jiuykih4"]
+
+[ext_resource type="Texture2D" uid="uid://cbl52f66ka46j" path="res://global_assets/tray_ingredients/tray_shrimp/side_shrimp.png" id="1_jfbd7"]
+[ext_resource type="Script" uid="uid://bbsjjwk61kyxy" path="res://global_scripts/resources/ingredient_data.gd" id="1_lvkdp"]
+[ext_resource type="Texture2D" uid="uid://k8iwanlouh26" path="res://global_assets/tray_ingredients/tray_shrimp/tray_shrimp.png" id="3_u3wti"]
+
+[resource]
+script = ExtResource("1_lvkdp")
+id = &"shrimp"
+texture = ExtResource("3_u3wti")
+layer_texture = ExtResource("1_jfbd7")
+color_tag = &"pink"
+unit_singular = "serving of shrimp"
+unit_plural = "servings of shrimp"
+metadata/_custom_type_script = "uid://bbsjjwk61kyxy"

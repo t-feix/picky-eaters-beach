@@ -19,6 +19,7 @@ const FILES := [
 	preload("res://global_assets/tray_ingredients/tray_tomato/tray_tomato.tres"),
 	preload("res://global_assets/tray_ingredients/tray_bacon/tray_bacon.tres"),
 	preload("res://global_assets/tray_ingredients/tray_ham/tray_ham.tres"),
+	preload("res://global_assets/tray_ingredients/tray_shrimp/tray_shrimp.tres"),
 	preload("res://global_assets/tray_ingredients/tray_onion_red/tray_onion_red.tres"),
 	preload("res://global_assets/tray_ingredients/tray_onion_white/tray_onion_white.tres"),
 	preload("res://global_assets/tray_ingredients/tray_chicken_breast/tray_chicken_breast.tres"),
