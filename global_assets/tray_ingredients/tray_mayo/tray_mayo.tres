@@ -6,7 +6,8 @@
 
 [resource]
 script = ExtResource("1_u8ndn")
-is_sauce = true
+station = 1
+sound_kind = 3
 id = &"mayo"
 texture = ExtResource("3_k7vgs")
 layer_texture = ExtResource("1_tmi4e")

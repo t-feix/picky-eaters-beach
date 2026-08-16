@@ -11,9 +11,10 @@ var hi: int
 var positive: bool
 
 
-static func bread_ends() -> Demand:
+static func bread_ends(id: StringName) -> Demand:
 	var d := Demand.new()
 	d.type = Type.BREAD_ENDS
+	d.subject = Selector.ing(id)
 	return d
 
 static func layer_count(n: int) -> Demand:
@@ -40,12 +41,14 @@ static func touch(subj: Selector, obj: Selector, positive: bool) -> Demand:
 	return d
 
 
+
+
 func check(layers: Array) -> bool:
 	match type:
 		Type.BREAD_ENDS:
 			return layers.size() >= 2 \
-				and layers[0] == &"bread" \
-				and layers[-1] == &"bread"
+				and subject.matches(layers[0]) \
+				and subject.matches(layers[-1])
 		Type.LAYER_COUNT:
 			return layers.size() == lo
 		Type.COUNT_RANGE:
@@ -78,7 +81,7 @@ func check(layers: Array) -> bool:
 func describe(singles := {}) -> String:
 	match type:
 		Type.BREAD_ENDS:
-			return "It needs bread on the top and the bottom."
+			return "It needs %s on the top and the bottom." % subject.noun(true)
 		Type.LAYER_COUNT:
 			return "It must have exactly %d layers." % lo
 		Type.COUNT_RANGE:

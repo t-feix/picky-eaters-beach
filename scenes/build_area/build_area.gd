@@ -6,7 +6,7 @@ const LAYER_SCENE := preload("res://scenes/build_area/sandwich_layer.tscn")
 
 @onready var stack: Control = %StackBox
 
-const SQUASH = 0.15
+const SQUASH = 0.25
 
 var _stack_home: Vector2
 
@@ -130,6 +130,8 @@ func _reindex() -> void:
 		node.z_index = i
 
 func insert_layer(idx: int, id: StringName) -> void:
+	var ing: IngredientData = Ingredients.by_id[id]
+	Audio.play_ingredient(ing)
 	layers.insert(idx, id)
 	var node: SandwichLayer = LAYER_SCENE.instantiate()
 	stack.add_child(node)
@@ -141,8 +143,10 @@ func insert_layer(idx: int, id: StringName) -> void:
 	node.snap_to(_target_position(idx))
 	_position_layers(true)
 	sandwich_changed.emit(layers)
-
+	
 func remove_at(idx: int) -> void:
+	if _lifted_idx == -1:
+		Audio.play_ingredient(Ingredients.by_id[layers[idx]])
 	layers.remove_at(idx)
 	var node: SandwichLayer = stack.get_child(idx)
 	stack.remove_child(node)

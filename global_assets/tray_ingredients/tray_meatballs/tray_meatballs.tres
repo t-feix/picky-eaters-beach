@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource("1_edglu")
+sound_kind = 1
 id = &"meatballs"
 texture = ExtResource("3_m3rto")
 layer_texture = ExtResource("1_628k6")

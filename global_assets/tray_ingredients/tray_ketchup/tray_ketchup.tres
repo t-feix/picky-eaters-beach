@@ -6,7 +6,8 @@
 
 [resource]
 script = ExtResource("1_vj6l1")
-is_sauce = true
+station = 1
+sound_kind = 2
 id = &"ketchup"
 texture = ExtResource("3_7lcy4")
 layer_texture = ExtResource("1_j8f4h")

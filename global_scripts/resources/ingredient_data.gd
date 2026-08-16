@@ -3,7 +3,13 @@ extends Resource
 
 const LAYER_WIDTH := 300
 
-@export var is_sauce: bool = false
+enum Station { TRAY, SAUCE, BREAD }
+
+@export var station: Station = Station.TRAY
+
+enum SoundKind { DRY, WET, KETCHUP, THICK }
+
+@export var sound_kind: SoundKind = SoundKind.DRY
 
 @export var id: StringName
 @export var display_name: String

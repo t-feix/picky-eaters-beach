@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c54hgwol86yh4" path="res://scenes/build_area/interior.png" id="5_ouso4"]
 [ext_resource type="PackedScene" uid="uid://subi2db3ftpu" path="res://scenes/serve_button/serve_button.tscn" id="7_hujxm"]
 [ext_resource type="Texture2D" uid="uid://c7wm5knswc03u" path="res://scenes/build_area/Plate.png" id="10_blune"]
-[ext_resource type="PackedScene" uid="uid://bke6lo4paasbt" path="res://scenes/sauce_shelf/sauce_shelf.tscn" id="11_ouso4"]
+[ext_resource type="PackedScene" uid="uid://bke6lo4paasbt" path="res://scenes/sauce_shelf/shelf.tscn" id="11_ouso4"]
 
 [node name="Main" type="Control" unique_id=1459291186]
 layout_mode = 3
@@ -85,7 +85,18 @@ offset_bottom = 747.76
 [node name="SauceShelf" parent="." unique_id=884540075 instance=ExtResource("11_ouso4")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 1417.0
-offset_top = 566.0
-offset_right = 1917.0
-offset_bottom = 726.0
+offset_left = 1369.0
+offset_top = 562.0
+offset_right = 1869.0
+offset_bottom = 722.0
+sep = -25
+
+[node name="BreadShelf" parent="." unique_id=1680635339 instance=ExtResource("11_ouso4")]
+layout_mode = 0
+offset_left = 1512.0
+offset_top = 781.0
+offset_right = 2012.0
+offset_bottom = 1081.0
+vertical = true
+station = 2
+slot_size = Vector2(60, 135)

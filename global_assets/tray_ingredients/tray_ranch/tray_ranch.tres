@@ -6,7 +6,8 @@
 
 [resource]
 script = ExtResource("1_pafsi")
-is_sauce = true
+station = 1
+sound_kind = 3
 id = &"ranch"
 texture = ExtResource("3_2twpo")
 layer_texture = ExtResource("1_wdbmu")

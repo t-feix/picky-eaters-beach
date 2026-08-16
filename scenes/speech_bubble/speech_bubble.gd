@@ -25,6 +25,7 @@ func set_status(idx: int, s: DemandRow.Status) -> void:
 	row.status = s
 
 func float_in(duration := 0.5) -> void:
+	Audio.play(Audio.PAGE_TURN)
 	visible = true
 	position.y = _home_y - size.y - 200.0
 	modulate.a = 0.0
@@ -35,6 +36,7 @@ func float_in(duration := 0.5) -> void:
 	await t.finished
 
 func float_out(duration := 0.35) -> void:
+	Audio.play(Audio.PAGE_TURN)
 	var t := create_tween().set_parallel(true)
 	t.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
 	t.tween_property(self, "position:y", _home_y - size.y - 200.0, duration)

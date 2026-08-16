@@ -13,11 +13,53 @@ const VOICES := {
 
 var _players: Array[AudioStreamPlayer] = []
 
+const BUZZER    := preload("res://sfx/IncorrectChoice.wav")
+const PAGE_TURN := preload("res://sfx/PageTurn.wav")
+
+const MUSIC_INTRO := preload("res://music/BeachThemeIntro.wav")
+const MUSIC_LOOP  := preload("res://music/BeachThemeLoop.wav")
+
+
+const INGREDIENT := {
+	IngredientData.SoundKind.DRY:     preload("res://sfx/DryIngredient.wav"),
+	IngredientData.SoundKind.WET:     preload("res://sfx/WetIngredient.wav"),
+	IngredientData.SoundKind.KETCHUP: preload("res://sfx/Ketchup.wav"),
+	IngredientData.SoundKind.THICK:   preload("res://sfx/ThickSauce.wav"),
+}
+
+var _music: AudioStreamPlayer
+
+func play_ingredient(ing: IngredientData) -> void:
+	play(INGREDIENT[ing.sound_kind], randf_range(0.92, 1.08))
+
 func _ready() -> void:
 	for i in 8:
 		var p := AudioStreamPlayer.new()
+		p.bus = &"SFX"
 		add_child(p)
 		_players.append(p)
+	
+	_music = AudioStreamPlayer.new()
+	_music.bus = &"Music"
+	add_child(_music)
+	_music.finished.connect(_on_music_finished)
+	print("AUDIO buses: music=", AudioServer.get_bus_index(&"Music"),
+		" sfx=", AudioServer.get_bus_index(&"SFX"))
+	print("AUDIO streams: intro=", MUSIC_INTRO, " loop=", MUSIC_LOOP)
+
+func start_music() -> void:
+	print("START_MUSIC bus=", _music.bus, " stream=", _music.stream)
+	_music.stream = MUSIC_INTRO
+	_music.play()
+	print("  playing=", _music.playing,
+		" len=", MUSIC_INTRO.get_length(),
+		" vol=", AudioServer.get_bus_volume_db(AudioServer.get_bus_index(&"Music")))
+
+func _on_music_finished() -> void:
+	print("MUSIC finished, switching to loop")
+	if _music.stream != MUSIC_LOOP:
+		_music.stream = MUSIC_LOOP
+		_music.play()
 
 func play(stream: AudioStream, pitch := 1.0, volume_db := 0.0) -> AudioStreamPlayer:
 	if stream == null:

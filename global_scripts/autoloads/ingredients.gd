@@ -48,7 +48,7 @@ static func trim(tex: Texture2D) -> Texture2D:
 var all: Array[IngredientData] = []
 var tray: Array[IngredientData] = []
 var sauces: Array[IngredientData] = []
-
+var breads: Array[IngredientData] = []
 
 var by_id: Dictionary = {}
 
@@ -56,10 +56,10 @@ func _ready() -> void:
 	for ing in FILES:
 		all.append(ing)
 		by_id[ing.id] = ing
-		if ing.is_sauce:
-			sauces.append(ing)
-		else:
-			tray.append(ing)
+		match ing.station:
+			IngredientData.Station.SAUCE: sauces.append(ing)
+			IngredientData.Station.BREAD: breads.append(ing)
+			_:                            tray.append(ing)
 
 func _scan(dir_path: String) -> void:
 	var dir := DirAccess.open(dir_path)

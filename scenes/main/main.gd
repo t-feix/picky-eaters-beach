@@ -85,6 +85,16 @@ func _present_order() -> void:
 	await get_tree().create_timer(0.4).timeout
 	_set_state(State.BUILDING)
 
+var _music_started := false
+
+func _input(event: InputEvent) -> void:
+	if _music_started:
+		return
+	if event is InputEventMouseButton or event is InputEventKey:
+		print("INPUT gate fired, starting music")
+		_music_started = true
+		Audio.start_music()
+
 func _on_serve() -> void:
 	if state != State.BUILDING:
 		return
@@ -100,6 +110,7 @@ func _on_serve() -> void:
 	await get_tree().create_timer(0.5).timeout
 
 	if not all_met:
+		Audio.play(Audio.BUZZER)
 		await _show_reaction(false)
 		_set_state(State.BUILDING)
 		return

@@ -27,15 +27,16 @@ static func _sig(ext: Dictionary) -> String:
 	return ",".join(keys)
 
 static func random_sandwich(height: int) -> Array[StringName]:
+	var bread: IngredientData = Ingredients.breads.pick_random()
 	var fillings: Array[StringName] = []
 	for ing in Ingredients.all:
-		if ing.id != &"bread":
+		if ing.station != IngredientData.Station.BREAD:
 			fillings.append(ing.id)
 
-	var out: Array[StringName] = [&"bread"]
+	var out: Array[StringName] = [bread.id]
 	for i in height - 2:
 		out.append(fillings.pick_random())
-	out.append(&"bread")
+	out.append(bread.id)
 	return out
 
 static func _require_subjects(demands: Array, s: Array) -> void:
@@ -67,7 +68,7 @@ static func _rank(d: Demand) -> int:
 
 static func generate(sandwich: Array, extra := 3) -> Dictionary:
 	var demands: Array[Demand] = [
-		Demand.bread_ends(),
+		Demand.bread_ends(sandwich[0]),
 		Demand.layer_count(sandwich.size()),
 	]
 
@@ -102,7 +103,7 @@ static func _candidates(s: Array) -> Array[Demand]:
 	var counts := {}
 	var colors := {}
 	for id in s:
-		if id == &"bread":
+		if Ingredients.by_id[id].station == IngredientData.Station.BREAD:
 			continue
 		counts[id] = counts.get(id, 0) + 1
 		var c: StringName = Ingredients.by_id[id].color_tag

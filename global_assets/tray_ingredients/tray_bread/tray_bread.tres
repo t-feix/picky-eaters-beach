@@ -6,10 +6,11 @@
 
 [resource]
 script = ExtResource("1_y0114")
-id = &"bread"
+station = 2
+id = &"white_bread"
 texture = ExtResource("3_mwg2t")
 layer_texture = ExtResource("1_mwg2t")
 color_tag = &"brown"
-unit_singular = "slice of bread"
-unit_plural = "slices of bread"
+unit_singular = "slice of light bread"
+unit_plural = "slices of light bread"
 metadata/_custom_type_script = "uid://bbsjjwk61kyxy"
